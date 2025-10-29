@@ -69,7 +69,7 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Chamber of Deputies composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 SPD: [+ spd_r +]%
@@ -451,7 +451,7 @@ if (d3 && window) {
 }
 !}
 
-= Reichstag composition
+= Chamber of Deputies composition
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
