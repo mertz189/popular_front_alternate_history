@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "Popular Front: An Alternate History" + '_' + "Mertz";
+  var TITLE = "Social Democracy: An Alternate History" + '_' + "Autumn Chen";
 
   // the url is a link to game.json
   // test url: https://aucchen.github.io/social_democracy_mods/v0.1.json
