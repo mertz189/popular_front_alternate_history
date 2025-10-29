@@ -349,9 +349,9 @@ Q.in_weimar_coalition = 0;
 // Grand coalition = SPD + Z + BVP + DDP + DVP
 // also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + PCF + Z + DDP
+// Popular front = SPD + KPD + Z + DDP
 Q.in_popular_front = 0;
-// left coalition = SPD + PCF + left-splinters
+// left coalition = SPD + KPD + left-splinters
 Q.in_left_front = 0;
 // emergency government containing the SPD: only president Braun can do this.
 Q.in_emergency_government = 0;
@@ -363,7 +363,7 @@ Q.in_minority_government = 0;
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the PCF, in a popular front or left front government
+// dissent from the KPD, in a popular front or left front government
 Q.pcf_coalition_dissent = 0;
 
 // does the SPD tolerate the government even if it is not a participant?
