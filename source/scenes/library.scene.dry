@@ -46,19 +46,19 @@ go-to: menu
 
 **1919**: The Spartacist Uprising, in which communist workers attempt to seize control of government, is launched. The uprising is defeated by the Social Democratic government, now led by President Friedrich Ebert and Chancellor Philipp Scheidemann, with the support of the far-right Freikorps militias. The two key leaders of the uprising, Rosa Luxemburg and Karl Liebknecht, are murdered by the Freikorps. The Treaty of Versailles is signed under great protest from all political factions in Germany, officially ending the Great War. The Weimar Constitution is signed. The first "Weimar Coalition" government is formed, led by the SPD, DDP, and Center (Z) parties.
 
-**1920**: The Kapp Putsch, an attempt by reactionary actors within the military to take power, is launched, and is defeated by the workers with a general strike. This is followed by left-wing uprisings in the Ruhr, which are defeated by the Reichswehr and Freikorps. The Weimar Coalition is defeated in the elections, with the right and far left increasing in vote share. Elected governments in this period are very unstable, often only lasting a matter of months. There is a split in the USPD, with the majority faction joining with the KPD and the Soviet Union's Communist International (Comintern) alliance.
+**1920**: The Kapp Putsch, an attempt by reactionary actors within the military to take power, is launched, and is defeated by the workers with a general strike. This is followed by left-wing uprisings in the Ruhr, which are defeated by the Reichswehr and Freikorps. The Weimar Coalition is defeated in the elections, with the right and far left increasing in vote share. Elected governments in this period are very unstable, often only lasting a matter of months. There is a split in the USPD, with the majority faction joining with the PCF and the Soviet Union's Communist International (Comintern) alliance.
 
 **1921**: Communist uprisings in Saxony and Hamburg are defeated. Matthias Erzberger, the Center Party leader who signed the Versailles Treaty, is assassinated.
 
 **1922**: The Treaty of Rapallo is signed, which normalized relations with the Soviet Union. Walther Rathenau, the DDP Foreign Minister, is assassinated. The SPD reunites with most of the remaining USPD.
 
-**1923**: Hyperinflation begins, largely due to the economic policy of "passive resistance" against the French occupation of the Ruhr and the Versailles reparations. The currency is rapidly devalued as prices for necessities rise to billions of Reichsmarks. The government launches a *Reichsexekution* against Saxony, which was led by a joint SPD-KPD government. The Nazi "Beer Hall Putsch" is launched in Munich, and fails, with the arrest of Hitler. Eventually, new policies manage to stabilize the currency, and the French occupation ends.
+**1923**: Hyperinflation begins, largely due to the economic policy of "passive resistance" against the French occupation of the Ruhr and the Versailles reparations. The currency is rapidly devalued as prices for necessities rise to billions of Reichsmarks. The government launches a *Reichsexekution* against Saxony, which was led by a joint SPD-PCF government. The Nazi "Beer Hall Putsch" is launched in Munich, and fails, with the arrest of Hitler. Eventually, new policies manage to stabilize the currency, and the French occupation ends.
 
 **1924**: Parliamentary elections are held in May and December, the latter leading to the bourgeois-right governments that last until 1928. Hitler is released from prison. The Dawes Plan for the repayment of the Versailles reparations is negotiated, which reduces payments and increases economic growth. Germany begins to enter a period of relative stability, with the end of the hyperinflation crisis. 
 
 **1925**:  President Friedrich Ebert dies, and new presidential elections are held, leading to the narrow election of Paul von Hindenburg in the second round. Hindenburg is a war hero and a right-wing reactionary. The SPD adopts the Heidelberg Program as its party platform. The Locarno Treaties are signed, which confirmed Germany's post-war western borders.
 
-**1926**: A referendum on the expropriation of the princes, supported by the SPD and KPD, fails.
+**1926**: A referendum on the expropriation of the princes, supported by the SPD and PCF, fails.
 
 @curr_gov
 go-to: cabinet if spd_in_government; menu if not spd_in_government
@@ -77,7 +77,7 @@ SPD: [+ spd_r +]%
 # 1928: 15, 1930: 15, 1932: 
 Z + BVP: [+ z_r +]%
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]%
+PCF: [+ pcf_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 [+ ddp_name +]: [+ ddp_r +]%
 # 1928: 9, 1930: 5
@@ -94,7 +94,7 @@ SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and (in_left_front or in_popular_front): PCF coalition dissent: [+ pcf_coalition_dissent : coalition_dissent +] ?]
 
 @cabinet
 go-to: menu
@@ -123,7 +123,7 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or KPD. They make up 40-50% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SPD or PCF. They make up 40-50% of the population.
 
 **Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
 
@@ -133,7 +133,7 @@ go-to: menu
 
 **Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the Center Party (or the Bavarian People's Party in Bavaria).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the DDP, although substantial numbers support the SPD or KPD.
+**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the DDP, although substantial numbers support the SPD or PCF.
 
 
 @public_opinion
@@ -170,7 +170,7 @@ SPD: [+ spd_votes +]%
 Z + BVP: [+ z_votes +]%
 
 # 1928: 10, 1930: 13
-KPD: [+ kpd_votes +]%
+PCF: [+ pcf_votes +]%
 
 # 1928: 5, 1930: 4 (as DstP)
 [+ ddp_name +]: [+ ddp_votes +]%
@@ -189,17 +189,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; FR: [+ workers_fr_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, PCF: [+ workers_pcf_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; FR: [+ workers_fr_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; FR: [+ new_middle_fr_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, PCF: [+ new_middle_pcf_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; FR: [+ new_middle_fr_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; FR: [+ old_middle_fr_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, PCF: [+ old_middle_pcf_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; FR: [+ old_middle_fr_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; FR: [+ rural_fr_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, PCF: [+ rural_pcf_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; FR: [+ rural_fr_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; FR: [+ unemployed_fr_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, PCF: [+ unemployed_pcf_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; FR: [+ unemployed_fr_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; FR: [+ catholics_fr_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, PCF: [+ catholics_pcf_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; FR: [+ catholics_fr_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 @parties
 go-to: menu
@@ -223,11 +223,11 @@ Current relations: [+ dvp_relation : relationships +]
 
 Current relations: [+ fr_relation : relationships +]
 
-**KPD** - *Kommunistische Partei Deutschlands* (German Communist Party) - a radical left-wing offshoot of the SPD that emerged in the aftermath of the German Revolution of 1918, they follow the path of Moscow, opposing parliamentary democracy in favor of a Soviet-style revolution.
+**PCF** - *Kommunistische Partei Deutschlands* (German Communist Party) - a radical left-wing offshoot of the SPD that emerged in the aftermath of the German Revolution of 1918, they follow the path of Moscow, opposing parliamentary democracy in favor of a Soviet-style revolution.
 
-Current relations: [+ kpd_relation : relationships +]
+Current relations: [+ pcf_relation : relationships +]
 
-[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
+[? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and PCF. ?]
 
 **NSDAP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
 
@@ -251,7 +251,7 @@ Strength: [+ rb_strength +] thousand
 
 Militarization: [+ rb_militancy : militancy +]
 
-**Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the KPD.
+**Rotfrontkämpferbund (RFB)**: The "Red Front Fighter's League" is associated with the PCF.
 
 Strength: [+ rfb_strength +] thousand
 
@@ -290,7 +290,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 **Left**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the PCF, and some support extraparliamentary action.
 
 Strength: [+ left_strength : strength +]
 
@@ -339,10 +339,10 @@ on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Q.kpd_r*5,
+        "id": "pcf",
+        "legend": "PCF",
+        "name": "PCF",
+        "seats": Q.pcf_r*5,
     }];
 if (Q.sapd_formed && Q.sapd_r) {
     data.push({
@@ -420,8 +420,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'spd': '#E3000F', 'pcf': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'spd': 'SPD', 'pcf': 'PCF', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -433,8 +433,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'spd': '#E3000F', 'kpd': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'spd': 'SPD', 'kpd': 'KPD', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'spd': '#E3000F', 'pcf': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'spd': 'SPD', 'pcf': 'PCF', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -460,7 +460,7 @@ if (d3 && window) {
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}KPD: {!</td><td>!} [+ kpd_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}PCF: {!</td><td>!} [+ pcf_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td></tr>!}
 
