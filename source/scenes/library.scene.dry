@@ -451,7 +451,7 @@ if (d3 && window) {
 }
 !}
 
-= Chamber of Deputies composition
+= Reichstag composition
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
