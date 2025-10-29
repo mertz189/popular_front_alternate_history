@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1932;
+Q.year = 1928;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -331,7 +331,7 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
+Q.president = "Doumer";
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
 Q.chancellor_party = 'Z';
