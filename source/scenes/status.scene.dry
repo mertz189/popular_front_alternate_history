@@ -38,10 +38,10 @@ Prime Minister: [+ chancellor +] ([+ chancellor_party +])
 Chamber of Deputies composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="French Section of the Worker's Internationale">SFIO</span>!}: [+ sfio_r +]%
+{!<span class="tooltip-text" title="French Section of the Worker's Internationale" style="color: #c00000;">SFIO</span>!}: [+ sfio_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Alliance Démocratique" style="color: #C0A054;">**AD**</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="Alliance Démocratique" style="color: #C0A054;">AD</span>!}: [+ z_r +]%
 # 1928: 10, 1930: 13
 {!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_r +]%
 # 1928: 5, 1930: 4 (as DstP)
@@ -49,7 +49,7 @@ Chamber of Deputies composition:
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_r +]%
 # 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="Republican Federation">FR</span>!}: [+ fr_r +]%
+{!<span class="tooltip-text" title="Republican Federation" style="color: #0087DC;">FR</span>!}: [+ fr_r +]%
 # 1928: 3, 1930: 18
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)"style="color: #7A3C00;">NSDAP</span>!}: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
@@ -76,17 +76,17 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Alliance Démocratique" style="color: #C0A054;">AD</span>!}: [+ z_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_r +]%
 
-{!<span class="tooltip-text" title="German People's Party">PRRRS</span>!}: [+ prrrs_relation : relationships +]
+{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
 
-{!<span class="tooltip-text" title="French Communist Party">PCF</span>!}: [+ pcf_relation : relationships +]
+{!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_r +]%
 
-{!<span class="tooltip-text" title="Republican Federation">FR</span>!}: [+ fr_relation : relationships +]
+{!<span class="tooltip-text" title="Republican Federation" style="color: #0087DC;">FR</span>!}: [+ fr_r +]%
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)"style="color: #7A3C00;">NSDAP</span>!}: [+ nsdap_r +]%
 
 = Internal Factions of the SFIO
 
