@@ -1,14 +1,14 @@
 title: President Doumer Assassinated !
-view-if: year = 1932 and month = 4
+view-if: year = 1932 and month = 5
 frequency: 1000
 max-visits: 1
 tags: event
 go-to: pm if chancellor = "Müller"; not_pm if chancellor != "Müller"
-on-arrival: muller_dead = 1; n_advisors -= 1 if muller_advisor == 1; muller_advisor = 0;
+on-arrival: president = "Vacant"
 new-page: true
 face-image: img/portraits/MüllerHermann.jpg
 
-= The Death of Hermann Müller
+= President Doumer Assassinated !
 
 @pm
 on-arrival: muller_died_in_office = 1
