@@ -1,5 +1,5 @@
 title: President Doumer Assassinated !
-view-if: year = 1932 and month >= 3
+view-if: year = 1932 and month = 4
 frequency: 1000
 max-visits: 1
 tags: event
