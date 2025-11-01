@@ -31,7 +31,7 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [+ president +]
+President: [? if president == "Doumer": <span style="color: #808080;">Doumer</span> ?] [? if president == "Vacant": <span style="color: #808080;">Vacant</span> ?]
 
 Prime Minister: [+ chancellor +] ([+ chancellor_party +])
 
@@ -76,7 +76,7 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Democratic Alliance" style="color: #C0A054;">AD</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Democratic Alliance" style="color: #C0A054;">AD</span>!}: [+ z_relation : relationships +] [+ z_relation +]
 
 {!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_relation : relationships +]
 
