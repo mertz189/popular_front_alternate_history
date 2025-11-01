@@ -78,15 +78,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Alliance Démocratique" style="color: #C0A054;">AD</span>!}: [+ z_relation : relationships +]
 
-{!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_r +]%
+{!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_r +]%
+{!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_relation : relationships +]
 
-{!<span class="tooltip-text" title="Republican Federation" style="color: #0087DC;">FR</span>!}: [+ fr_r +]%
+{!<span class="tooltip-text" title="Republican Federation" style="color: #0087DC;">FR</span>!}: [+ fr_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)"style="color: #7A3C00;">NSDAP</span>!}: [+ nsdap_r +]%
+{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)"style="color: #7A3C00;">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
 = Internal Factions of the SFIO
 
