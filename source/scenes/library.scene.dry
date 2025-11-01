@@ -81,7 +81,7 @@ PCF: [+ pcf_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 [+ ddp_name +]: [+ ddp_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+PRRRS: [+ prrrs_r +]%
 # 1928: 14, 1930: 7
 FR: [+ fr_r +]%
 # 1928: 3, 1930: 18
@@ -176,7 +176,7 @@ PCF: [+ pcf_votes +]%
 [+ ddp_name +]: [+ ddp_votes +]%
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+PRRRS: [+ prrrs_votes +]%
 
 # 1928: 14, 1930: 7
 FR: [+ fr_votes +]%
@@ -189,17 +189,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SFIO: [+ workers_sfio_display +]%, Z: [+ workers_z_display +]%, PCF: [+ workers_pcf_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; FR: [+ workers_fr_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SFIO: [+ workers_sfio_display +]%, Z: [+ workers_z_display +]%, PCF: [+ workers_pcf_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, PRRRS: [+ workers_prrrs_display +]%; FR: [+ workers_fr_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SFIO: [+ new_middle_sfio_display +]%, Z: [+ new_middle_z_display +]%, PCF: [+ new_middle_pcf_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; FR: [+ new_middle_fr_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SFIO: [+ new_middle_sfio_display +]%, Z: [+ new_middle_z_display +]%, PCF: [+ new_middle_pcf_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, PRRRS: [+ new_middle_prrrs_display +]%; FR: [+ new_middle_fr_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SFIO: [+ old_middle_sfio_display +]%, Z: [+ old_middle_z_display +]%, PCF: [+ old_middle_pcf_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; FR: [+ old_middle_fr_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SFIO: [+ old_middle_sfio_display +]%, Z: [+ old_middle_z_display +]%, PCF: [+ old_middle_pcf_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, PRRRS: [+ old_middle_prrrs_display +]%; FR: [+ old_middle_fr_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SFIO: [+ rural_sfio_display +]%, Z: [+ rural_z_display +]%, PCF: [+ rural_pcf_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; FR: [+ rural_fr_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SFIO: [+ rural_sfio_display +]%, Z: [+ rural_z_display +]%, PCF: [+ rural_pcf_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, PRRRS: [+ rural_prrrs_display +]%; FR: [+ rural_fr_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SFIO: [+ unemployed_sfio_display +]%, Z: [+ unemployed_z_display +]%, PCF: [+ unemployed_pcf_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; FR: [+ unemployed_fr_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SFIO: [+ unemployed_sfio_display +]%, Z: [+ unemployed_z_display +]%, PCF: [+ unemployed_pcf_display +]%, [+ ddp_name +]: [+ unemployed_ddp_display +]%, PRRRS: [+ unemployed_prrrs_display +]%; FR: [+ unemployed_fr_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SFIO: [+ catholics_sfio_display +]%, Z: [+ catholics_z_display +]%, PCF: [+ catholics_pcf_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; FR: [+ catholics_fr_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SFIO: [+ catholics_sfio_display +]%, Z: [+ catholics_z_display +]%, PCF: [+ catholics_pcf_display +]%, [+ ddp_name +]: [+ catholics_ddp_display +]%, PRRRS: [+ catholics_prrrs_display +]%; FR: [+ catholics_fr_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 @parties
 go-to: menu
@@ -215,9 +215,9 @@ Current relations: [+ z_relation : relationships +]
 
 Current relations: [+ ddp_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**PRRRS** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ prrrs_relation : relationships +]
 
 **FR** - *Fédération Républicaine* (Republican Federation) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
 
@@ -233,7 +233,7 @@ Current relations: [+ pcf_relation : relationships +]
 
 Current relations: [+ nsdap_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and FR. 
+**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRRRS and FR. 
 
 @paramilitaries
 on-arrival: {!
@@ -378,10 +378,10 @@ data = data.concat([
         "seats": 3*5,
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "id": "prrrs",
+        "legend": "PRRRS",
+        "name": "PRRRS",
+        "seats": Q.prrrs_r*5,
     },
     {
         "id": "other",
@@ -420,8 +420,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'sfio': '#E3000F', 'pcf': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'sfio': 'SFIO', 'pcf': 'PCF', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'sfio': '#E3000F', 'pcf': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'prrrs': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'sfio': 'SFIO', 'pcf': 'PCF', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'prrrs': 'PRRRS', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -433,8 +433,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'sfio': '#E3000F', 'pcf': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'sfio': 'SFIO', 'pcf': 'PCF', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'sfio': '#E3000F', 'pcf': '#8B0000', 'ddp': '#DCCA4A', 'z': '#000', 'prrrs': '#D5AC27', 'fr': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'sfio': 'SFIO', 'pcf': 'PCF', 'ddp': Q.ddp_name, 'z': 'Z + BVP', 'prrrs': 'PRRRS', 'fr': 'FR', 'nsdap': 'NSDAP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -468,7 +468,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRRRS: {!</td><td>!} [+ prrrs_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 
