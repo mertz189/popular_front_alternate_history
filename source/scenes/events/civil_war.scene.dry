@@ -49,8 +49,8 @@ if (Q.pcf_relation >= 60) {
 // general strike strength
 // maximum (given 25 labor strength) is 400
 // use normalized workers_sfio instead of labor_strength?
-Q.normalized_workers_sfio = 100*Q.workers_sfio/(Q.workers_sfio + Q.workers_pcf + Q.workers_nsdap + Q.workers_other + Q.workers_fr + Q.workers_z);
-Q.normalized_workers_pcf = 100*Q.workers_pcf/(Q.workers_sfio + Q.workers_pcf + Q.workers_nsdap + Q.workers_other + Q.workers_fr + Q.workers_z);
+Q.normalized_workers_sfio = 100*Q.workers_sfio/(Q.workers_sfio + Q.workers_pcf + Q.workers_pdp + Q.workers_other + Q.workers_fr + Q.workers_z);
+Q.normalized_workers_pcf = 100*Q.workers_pcf/(Q.workers_sfio + Q.workers_pcf + Q.workers_pdp + Q.workers_other + Q.workers_fr + Q.workers_z);
 Q.normalized_workers_total = Q.normalized_workers_sfio;
 if (Q.pcf_relation >= 60) {
     Q.normalized_workers_total += Q.normalized_workers_pcf;

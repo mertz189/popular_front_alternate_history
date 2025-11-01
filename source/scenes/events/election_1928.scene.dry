@@ -29,7 +29,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prrrs_relation -= 8; z_relation -= 8; prs_relation -= 10; pcf_relation -= 8; coup_progress += 2; workers_sfio -= 4; new_middle_sfio -= 5; old_middle_sfio -= 5; rural_sfio -= 5; catholics_sfio -= 5; unemployed_sfio -= 5; coup_progress += 2 if nsdap_normalized >= 0.3; coup_progress += 2 if nsdap_normalized + fr_normalized >= 0.5; sa_strength += 100 if coup_progress >= 7; sh_strength += 100 if coup_progress >= 7
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prrrs_relation -= 8; z_relation -= 8; prs_relation -= 10; pcf_relation -= 8; coup_progress += 2; workers_sfio -= 4; new_middle_sfio -= 5; old_middle_sfio -= 5; rural_sfio -= 5; catholics_sfio -= 5; unemployed_sfio -= 5; coup_progress += 2 if pdp_normalized >= 0.3; coup_progress += 2 if pdp_normalized + fr_normalized >= 0.5; sa_strength += 100 if coup_progress >= 7; sh_strength += 100 if coup_progress >= 7
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -88,13 +88,13 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the NSDAP or the SFIO.
+// The largest party can only be the PDP or the SFIO.
 Q.largest_party = 'SFIO';
-if (Q.nsdap_r >= Q.sfio_r && Q.nsdap_r >= Q.pcf_r) {
-    Q.largest_party = 'NSDAP';
+if (Q.pdp_r >= Q.sfio_r && Q.pdp_r >= Q.pcf_r) {
+    Q.largest_party = 'PDP';
 }
 
-if (Q.pcf_r >= Q.sfio_r && Q.pcf_r >= Q.nsdap_r) {
+if (Q.pcf_r >= Q.sfio_r && Q.pcf_r >= Q.pdp_r) {
     Q.largest_party = 'PCF';
 }
 
@@ -104,15 +104,15 @@ Q.grand_coalition = Q.sfio_r + Q.prs_r + Q.z_r + Q.prrrs_r;
 Q.bourgeois_coalition = Q.prs_r + Q.z_r + Q.prrrs_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.prs_r + Q.prrrs_r + Q.other_r + Q.fr_r;
 Q.right_coalition = Q.z_r + Q.prrrs_r + Q.other_r + Q.fr_r;
-Q.far_right_coalition = Q.fr_r + Q.nsdap_r;
+Q.far_right_coalition = Q.fr_r + Q.pdp_r;
 Q.left_coalition = Q.sfio_r + Q.pcf_r + Q.sapd_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.sfio_r + Q.pcf_r + Q.z_r + Q.prs_r - 3 + Q.sapd_r;
-Q.anti_democratic_coalition = Q.pcf_r + Q.nsdap_r + Q.fr_r;
+Q.anti_democratic_coalition = Q.pcf_r + Q.pdp_r + Q.fr_r;
 // aka everyone except nazi, pcf, fr
 Q.neo_weimar_coalition = Q.sfio_r + Q.prs_r + Q.z_r + Q.prrrs_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.fr_r + Q.nsdap_r;
+Q.hitler_right_coalition = Q.z_r + Q.fr_r + Q.pdp_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.sfio_r + Q.pcf_r + Q.prs_r + Q.sapd_r;
 
@@ -171,7 +171,7 @@ Q.strike_term_seen = 0;
 Q.z_minus_bvp_r = Q.z_r - 3;
 
 // understanding the enemy
-if (Q.nsdap_r >= 15) {
+if (Q.pdp_r >= 15) {
     Q.understanding_enemy_timer = 2;
 }
 
@@ -181,7 +181,7 @@ for (var party of Q.parties) {
 }
 Q.election_records.push(election_result);
 !}
-on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
+on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and pdp_r >= 15)
 on-display: {!
 data = [
     {
@@ -243,10 +243,10 @@ data = data.concat([
         "seats": Math.round(Q.fr_r*5),
     },
     {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
+        "id": "pdp",
+        "legend": "PDP",
+        "name": "PDP",
+        "seats": Math.round(Q.pdp_r*5),
     },
 ]);
 
@@ -293,7 +293,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} FR: {!</td><td>!} [+ fr_r +]% {!</td><td>!} [+ str_change_fr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} PDP: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_pdp +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
@@ -306,9 +306,9 @@ Bourgeois Coalition (Z + BVP + [+ prs_name +] + PRRRS + Others): [+ bourgeois_co
 
 Right-wing Coalition (Z + BVP + PRRRS + Others + FR): [+ right_coalition +]%
 
-[? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and pdp_r >= 15 : The rapid rise in PDP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PCF, FR, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PCF, FR, and PDP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
@@ -412,17 +412,17 @@ The Center manages to diffuse some of the hostility from the Reichswehr and the 
 
 @far_right_coalition
 title: Far-right coalition
-subtitle: NSDAP + FR ([+ far_right_coalition +]%)
+subtitle: PDP + FR ([+ far_right_coalition +]%)
 view-if: far_right_coalition >= 50
-go-to: far_right_win if (year >= 1932 or nsdap_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and nsdap_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
+go-to: far_right_win if (year >= 1932 or pdp_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and pdp_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
 priority: 2
 
-There are enough votes for the Nazis and the FR to form a coalition. [+ nsdap_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
+There are enough votes for the Nazis and the FR to form a coalition. [+ pdp_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
 
 @far_right_win
-on-arrival: chancellor = nsdap_leader; chancellor_party = "NSDAP"
+on-arrival: chancellor = pdp_leader; chancellor_party = "PDP"
 
-[? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ nsdap_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
+[? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ pdp_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
 
 - @hitler_takes_power: What do we do now?
 
@@ -432,7 +432,7 @@ on-arrival: chancellor = "Schleicher"; chancellor_party = "I"; pro_republic -= 1
 
 The reactionary establishment is still very skeptical of the Nazis, so instead, [+ president +] appoints Kurt von Schleicher, a former general, as chancellor, to try to "tame" the Nazis.
 
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.
+Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the PDP, the Nazis want power all to themselves, without Schleicher.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
@@ -585,7 +585,7 @@ There is no path to an obviously workable majority. Since President Hindenburg i
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 
-# - if NSDAP is the largest party and the 
+# - if PDP is the largest party and the 
 
 @no_majority_bruning
 go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); hindenburg_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
@@ -605,7 +605,7 @@ on-arrival: no_majority_bruning_elections += 1
 
 There is no path to a majority government. One option would be to have a continuation of the current Brüning government; if we tolerate it, then it would retain a majority vote against no-confidence.
 
-Alternatively, we could try to form a "new grand coalition" of all constitutional parties except the NSDAP, PCF, and FR. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
+Alternatively, we could try to form a "new grand coalition" of all constitutional parties except the PDP, PCF, and FR. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
 
 The third option is to have new elections.
 
@@ -697,7 +697,7 @@ We have supported a minority government led by the Center Party under Chancellor
 
 
 @no_majority_papen
-on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap += 6; unemployed_nsdap += 6; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_nsdap += 5; no_majority_papen_elections += 1; workers_sfio -= 8 if pro_republic < 45; workers_sfio *= 0.85 if pro_republic < 40; workers_nsdap += 5 if pro_republic < 40;
+on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_pdp += 6; unemployed_pdp += 6; old_middle_pdp += 5; new_middle_pdp += 5; rural_pdp += 5; no_majority_papen_elections += 1; workers_sfio -= 8 if pro_republic < 45; workers_sfio *= 0.85 if pro_republic < 40; workers_pdp += 5 if pro_republic < 40;
 
 After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Reichstag is dissolved once more.
 
@@ -705,11 +705,11 @@ New elections have been set for [+ next_election_month : month +] [+ next_electi
 
 
 @no_majority_papen_2
-on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_nsdap += 5; unemployed_nsdap += 10; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_nsdap += 10; workers_sfio -= 8 if pro_republic < 45; workers_sfio *= 0.85 if pro_republic < 40; workers_nsdap += 5 if pro_republic < 40; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
+on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_pdp += 5; unemployed_pdp += 10; old_middle_pdp += 5; new_middle_pdp += 5; rural_pdp += 10; workers_sfio -= 8 if pro_republic < 45; workers_sfio *= 0.85 if pro_republic < 40; workers_pdp += 5 if pro_republic < 40; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
 
 There is no path to a majority government. Hindenburg is displeased with Papen, and calls on him to resign. Now, former army general Kurt von Schleicher has been appointed chancellor, again as part of a presidential government.
 
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the NSDAP, the Nazis want power all to themselves, without Schleicher.
+Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the PDP, the Nazis want power all to themselves, without Schleicher.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
@@ -717,17 +717,17 @@ New elections have been set for [+ next_election_month : month +] [+ next_electi
 @no_majority_schleicher
 go-to: hitler_chancellor
 
-# TODO: there should be a second Schleicher option if the NSDAP isn't the strongest
+# TODO: there should be a second Schleicher option if the PDP isn't the strongest
 
 
 @hitler_chancellor
-on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"
+on-arrival: chancellor = "Hitler"; chancellor_party = "PDP"
 
-There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "NSDAP" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
+There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "PDP" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
 
 - @hitler_takes_power: What now?
 
-# if NSDAP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
+# if PDP is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
 
 @sfio_majority
 title: SFIO majority alone
@@ -856,9 +856,9 @@ Their numbers are bolstered by the many government workers who are against the p
 @emergency_no_confidence
 title: The Nazis immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
-on-arrival: z_no_confidence = 1 if z_relation < 45; pcf_no_confidence = 1 if pcf_relation < 45; other_no_confidence = 1 if (z_relation + prrrs_relation)/2 < 45; prrrs_no_confidence = 1 if prrrs_relation < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = nsdap_r + fr_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += prrrs_r if prrrs_no_confidence; no_confidence_votes += pcf_r if pcf_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
+on-arrival: z_no_confidence = 1 if z_relation < 45; pcf_no_confidence = 1 if pcf_relation < 45; other_no_confidence = 1 if (z_relation + prrrs_relation)/2 < 45; prrrs_no_confidence = 1 if prrrs_relation < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = pdp_r + fr_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += prrrs_r if prrrs_no_confidence; no_confidence_votes += pcf_r if pcf_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
-The NSDAP and FR will vote against us, of course. The other parties vote their conscience. [? if z_no_confidence: The Center Party is voting against us. ?] [? if pcf_no_confidence: The PCF votes against us. ?] [? if other_no_confidence: The assortment of minor parties are voting against us. ?]
+The PDP and FR will vote against us, of course. The other parties vote their conscience. [? if z_no_confidence: The Center Party is voting against us. ?] [? if pcf_no_confidence: The PCF votes against us. ?] [? if other_no_confidence: The assortment of minor parties are voting against us. ?]
 
 In total, [+ no_confidence_votes +]% of the Reichstag is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
 
@@ -884,11 +884,11 @@ Q.new_middle_sfio -= 3;
 Q.old_middle_sfio -= 3;
 Q.rural_sfio -= 3;
 Q.catholics_sfio -= 3;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 3;
-Q.new_middle_nsdap += 3;
-Q.rural_nsdap += 3;
-Q.unemployed_nsdap += 5;
+Q.workers_pdp += 5;
+Q.old_middle_pdp += 3;
+Q.new_middle_pdp += 3;
+Q.rural_pdp += 3;
+Q.unemployed_pdp += 5;
 if (Q.pro_republic < 45 && Q.pro_republic >= 38) {
     Q.workers_sfio -= 6;
 }
@@ -898,11 +898,11 @@ if (Q.pro_republic < 38) {
     Q.old_middle_sfio -= 5;
     Q.rural_sfio -= 5;
     Q.catholics_sfio -= 3;
-    Q.workers_nsdap += 5;
-    Q.old_middle_nsdap += 5;
-    Q.new_middle_nsdap += 5;
-    Q.rural_nsdap += 5;
-    Q.unemployed_nsdap += 5;   
+    Q.workers_pdp += 5;
+    Q.old_middle_pdp += 5;
+    Q.new_middle_pdp += 5;
+    Q.rural_pdp += 5;
+    Q.unemployed_pdp += 5;   
 }
 !}
 view-if: no_confidence_votes > 50
@@ -984,7 +984,7 @@ Heinrich Brüning welcomes us into his new cabinet. Now, we have our pick of min
 @bruning_oppo
 on-arrival: sfio_in_government = 0; sfio_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRRRS"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; grand_coalition_failed = 1
 
-By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the FR. However, the FR leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the NSDAP is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the FR, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the NSDAP is not interested in coalition government. This means that there is no route to a majority coalition. ?]
+By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the FR. However, the FR leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the PDP is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the FR, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the PDP is not interested in coalition government. This means that there is no route to a majority coalition. ?]
 
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and Chancellor may use the emergency powers granted by Article 48 of the constitution to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
@@ -1019,11 +1019,11 @@ Q.old_middle_prrrs -= 8;
 Q.new_middle_prs -= 5;
 Q.old_middle_prs -= 10;
 Q.rural_fr -= 5;
-Q.workers_nsdap += 5;
-Q.old_middle_nsdap += 6;
-Q.new_middle_nsdap += 6;
-Q.rural_nsdap += 6;
-Q.unemployed_nsdap += 5;
+Q.workers_pdp += 5;
+Q.old_middle_pdp += 6;
+Q.new_middle_pdp += 6;
+Q.rural_pdp += 6;
+Q.unemployed_pdp += 5;
 // Thresholds are kind of arbitrary - adjusted because of negative economic effects on pro_republic
 if (Q.pro_republic < 45 && Q.pro_republic >= 36) {
     Q.workers_sfio -= 6;
@@ -1038,11 +1038,11 @@ if (Q.pro_republic < 36) {
     Q.old_middle_sfio -= 5;
     Q.rural_sfio -= 5;
     Q.catholics_sfio -= 3;
-    Q.workers_nsdap += 8;
-    Q.old_middle_nsdap += 8;
-    Q.new_middle_nsdap += 8;
-    Q.rural_nsdap += 8;
-    Q.unemployed_nsdap += 8;   
+    Q.workers_pdp += 8;
+    Q.old_middle_pdp += 8;
+    Q.new_middle_pdp += 8;
+    Q.rural_pdp += 8;
+    Q.unemployed_pdp += 8;   
 }
 if (Q.far_right_coalition >= 50) {
     Q.sa_strength += 100;
@@ -1059,7 +1059,7 @@ The people's faith in democracy is shaken by this ordeal. Of course, the Nazis a
 @toleration_bruning
 choose-if: neo_weimar_coalition >= 50
 unavailable-subtitle: The parties supporting Brüning do not have a majority.
-on-arrival: sfio_in_government = 0; sfio_toleration = 1; minority_government = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRRRS"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = prs_name; finance_minister_party = "PRRRS"; agriculture_minister_party = "Z"; pro_republic -= 4; new_middle_prrrs -= 5; new_middle_prs -= 5; old_middle_prrrs -= 5; old_middle_prs -= 5; old_middle_nsdap += 5; new_middle_nsdap += 5; rural_fr -= 5;
+on-arrival: sfio_in_government = 0; sfio_toleration = 1; minority_government = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRRRS"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = prs_name; finance_minister_party = "PRRRS"; agriculture_minister_party = "Z"; pro_republic -= 4; new_middle_prrrs -= 5; new_middle_prs -= 5; old_middle_prrrs -= 5; old_middle_prs -= 5; old_middle_pdp += 5; new_middle_pdp += 5; rural_fr -= 5;
 
 We have decided to tolerate Brüning's government. This means that we will vote against no-confidence votes to make sure they fail, but also that we will not be directly participating as ministers in the government. Thus, we can prevent a new election and stop the far right from entering government.
 
@@ -1090,7 +1090,7 @@ Under the influence of Gustav Stresemann, the PRRRS agrees to allow us into the 
 
 The PRRRS asks us to adhere to their conservative economic policies (that is, extreme austerity and labor discipline) in exchange for us joining the coalition.
 
-- @beg_prrrs_2: But they would not have a majority without the SFIO! The FR and NSDAP have no interest in participating in government.
+- @beg_prrrs_2: But they would not have a majority without the SFIO! The FR and PDP have no interest in participating in government.
 - @no_majority: There is no chance that we would agree.
 - @brauns_dilemma
 - @coalition_menu: What are the other governing arrangements?
@@ -1099,7 +1099,7 @@ The PRRRS asks us to adhere to their conservative economic policies (that is, ex
 @beg_prrrs_2
 go-to: beg_prrrs_succeed; beg_prrrs_fail
 
-We make the case that without the SFIO, there is no parliamentary majority, given the FR and NSDAP's hostility to constitutional government.
+We make the case that without the SFIO, there is no parliamentary majority, given the FR and PDP's hostility to constitutional government.
 
 @beg_prrrs_succeed
 go-to: join_bruning
