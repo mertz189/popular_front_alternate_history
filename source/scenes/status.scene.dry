@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-SFIO position: [? if sfio_toleration : toleration ?][? if sfio_in_government : in government - ?][? if sfio_toleration == 0 and sfio_in_government == 0 and sfio_caretaker == 0 : opposition ?][? if sfio_caretaker : caretaker government ?]
+<span style="color: #c00000;">SFIO</span> position: [? if sfio_toleration : toleration ?][? if sfio_in_government : in government - ?][? if sfio_toleration == 0 and sfio_in_government == 0 and sfio_caretaker == 0 : opposition ?][? if sfio_caretaker : caretaker government ?]
 [? if in_weimar_coalition and sfio_in_government: Weimar Coalition ?][? if in_grand_coalition and sfio_in_government: Grand Coalition ?][? if in_popular_front and sfio_in_government: Popular Front ?][? if in_left_front and sfio_in_government: Left Front ?][? if in_sfio_majority and sfio_in_government: SFIO majority ?][? if in_minority_government and sfio_in_government: minority government ?][? if in_emergency_government and sfio_in_government: emergency government ?]
 
 [? if sfio_in_government and not in_sfio_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
