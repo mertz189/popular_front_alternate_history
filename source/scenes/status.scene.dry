@@ -45,7 +45,7 @@ Chamber of Deputies composition:
 # 1928: 10, 1930: 13
 {!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="Republican-Socialist Party">!}[? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]{!</span>!}: [+ prs_r +]%
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_r +]%
 # 1928: 14, 1930: 7
@@ -80,7 +80,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Republican-Socialist Party" style="color: #c7017f;">PRS</span>!}: [+ prs_relation : relationships +]
 
 {!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_relation : relationships +]
 
@@ -166,7 +166,7 @@ Z + BVP: [+ z_votes +]%
 
 PCF: [+ pcf_votes +]%
 
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
+[? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ prs_votes +]%
 
 PRRRS: [+ prrrs_votes +]%
 
@@ -178,16 +178,16 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: SFIO: [+ workers_sfio_display +]%, Z: [+ workers_z_display +]%, PCF: [+ workers_pcf_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, PRRRS: [+ workers_prrrs_display +]%; FR: [+ workers_fr_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: SFIO: [+ workers_sfio_display +]%, Z: [+ workers_z_display +]%, PCF: [+ workers_pcf_display +]%, [? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ workers_prs_display +]%, PRRRS: [+ workers_prrrs_display +]%; FR: [+ workers_fr_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: SFIO: [+ new_middle_sfio_display +]%, Z: [+ new_middle_z_display +]%, PCF: [+ new_middle_pcf_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, PRRRS: [+ new_middle_prrrs_display +]%; FR: [+ new_middle_fr_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: SFIO: [+ new_middle_sfio_display +]%, Z: [+ new_middle_z_display +]%, PCF: [+ new_middle_pcf_display +]%, [? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ new_middle_prs_display +]%, PRRRS: [+ new_middle_prrrs_display +]%; FR: [+ new_middle_fr_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SFIO: [+ old_middle_sfio_display +]%, Z: [+ old_middle_z_display +]%, PCF: [+ old_middle_pcf_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, PRRRS: [+ old_middle_prrrs_display +]%; FR: [+ old_middle_fr_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: SFIO: [+ old_middle_sfio_display +]%, Z: [+ old_middle_z_display +]%, PCF: [+ old_middle_pcf_display +]%, [? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ old_middle_prs_display +]%, PRRRS: [+ old_middle_prrrs_display +]%; FR: [+ old_middle_fr_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: SFIO: [+ rural_sfio_display +]%, Z: [+ rural_z_display +]%, PCF: [+ rural_pcf_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, PRRRS: [+ rural_prrrs_display +]%; FR: [+ rural_fr_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: SFIO: [+ rural_sfio_display +]%, Z: [+ rural_z_display +]%, PCF: [+ rural_pcf_display +]%, [? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ rural_prs_display +]%, PRRRS: [+ rural_prrrs_display +]%; FR: [+ rural_fr_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: SFIO: [+ unemployed_sfio_display +]%, Z: [+ unemployed_z_display +]%, PCF: [+ unemployed_pcf_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, PRRRS: [+ unemployed_prrrs_display +]%; FR: [+ unemployed_fr_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: SFIO: [+ unemployed_sfio_display +]%, Z: [+ unemployed_z_display +]%, PCF: [+ unemployed_pcf_display +]%, [? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ unemployed_prs_display +]%, PRRRS: [+ unemployed_prrrs_display +]%; FR: [+ unemployed_fr_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: SFIO: [+ catholics_sfio_display +]%, Z: [+ catholics_z_display +]%, PCF: [+ catholics_pcf_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, PRRRS: [+ catholics_prrrs_display +]%; FR: [+ catholics_fr_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: SFIO: [+ catholics_sfio_display +]%, Z: [+ catholics_z_display +]%, PCF: [+ catholics_pcf_display +]%, [? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ catholics_prs_display +]%, PRRRS: [+ catholics_prrrs_display +]%; FR: [+ catholics_fr_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%

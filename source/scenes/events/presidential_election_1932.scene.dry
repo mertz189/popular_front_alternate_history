@@ -57,7 +57,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
-on-arrival: sfio_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_sfio -= 5; workers_sfio -= 3; pcf_relation += 10; communist_coalition += 2; z_relation -= 15; prrrs_relation -= 15; ddp_relation -= 10
+on-arrival: sfio_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_sfio -= 5; workers_sfio -= 3; pcf_relation += 10; communist_coalition += 2; z_relation -= 15; prrrs_relation -= 15; prs_relation -= 10
 
 Fine. We have thrown our support to Chairman Thälmann of the PCF.
 
@@ -149,7 +149,7 @@ The PCF now endorses Braun in the presidential election! We ask them to keep the
 max-visits: 1
 go-to: convince_liberals_success if prrrs_relation >= 50; convince_liberals_fail if prrrs_relation < 50
 
-The liberal vote ([+ ddp_name +] and PRRRS) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the [+ ddp_name +] is already willing to support Braun.
+The liberal vote ([+ prs_name +] and PRRRS) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the [+ prs_name +] is already willing to support Braun.
 
 @convince_liberals_success
 on-arrival: prrrs_support_braun = 1
@@ -185,7 +185,7 @@ Q.hindenburg_votes += Q.fr_normalized;
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.sfio_normalized;
-    Q.braun_votes += Q.ddp_normalized;
+    Q.braun_votes += Q.prs_normalized;
     if (Q.z_support_braun && Q.z_support_braun == 1) {
         Q.braun_votes += Q.z_normalized;
     } else {
@@ -211,12 +211,12 @@ if (Q.braun_campaign) {
     Q.thalmann_votes += Q.pcf_normalized;
     Q.thalmann_votes += Q.sfio_normalized;
     Q.hindenburg_votes += Q.z_normalized;
-    Q.hindenburg_votes += Q.ddp_normalized;
+    Q.hindenburg_votes += Q.prs_normalized;
     Q.hindenburg_votes += Q.prrrs_normalized;
 } else {
     Q.hindenburg_votes += Q.sfio_normalized;
     Q.hindenburg_votes += Q.z_normalized;
-    Q.hindenburg_votes += Q.ddp_normalized;
+    Q.hindenburg_votes += Q.prs_normalized;
     Q.hindenburg_votes += Q.prrrs_normalized;
     Q.thalmann_votes += Q.pcf_normalized;
 }
