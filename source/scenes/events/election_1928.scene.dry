@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Chamber of Deputies Elections
 new-page: true
 tags: event
 priority: -1
@@ -275,25 +275,26 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SFIO:** {!</td><td>!} **[+ sfio_r +]%** {!</td><td>!} **[+ str_change_sfio +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#c00000; outline: 2px; outline-style: solid;'> </div> !} **SFIO:** {!</td><td>!} **[+ sfio_r +]%** {!</td><td>!} **[+ str_change_sfio +]** {!</td></tr>!}
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}PCF: {!</td><td>!} [+ pcf_r +]% {!</td><td>!} [+ str_change_pcf +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#700000'> </div> !}PCF: {!</td><td>!} [+ pcf_r +]% {!</td><td>!} [+ str_change_pcf +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PUP: {!</td><td>!} 0% {!</td><td>!} 0 {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ prs_name +]: {!</td><td>!} [+ prs_r +]% {!</td><td>!} [+ str_change_prs +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} AD: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#c7017f'> </div> !} PRRRS: {!</td><td>!} [+ prrrs_r +]% {!</td><td>!} [+ str_change_prrrs +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} PDP: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_pdp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#C0A054'> </div> !} AD: {!</td><td>!} [+ z_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#0087DC'> </div> !} FR: {!</td><td>!} [+ fr_r +]% {!</td><td>!} [+ str_change_fr +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#0087DC'> </div> !} FR: {!</td><td>!} [+ fr_r +]% {!</td><td>!} [+ str_change_fr +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#A2D8E0'> </div> !} PDP: {!</td><td>!} [+ pdp_r +]% {!</td><td>!} [+ str_change_pdp +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
