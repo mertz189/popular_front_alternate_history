@@ -45,7 +45,7 @@ Chamber of Deputies composition:
 # 1928: 10, 1930: 13
 {!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="Republican-Socialist Party">!}[? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]{!</span>!}: [+ prs_r +]%
+{!<span class="tooltip-text" title="Republican-Socialist Party" style="color: #FF8000;">PRS</span>!}: [+ prs_r +]%
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_r +]%
 # 1928: 14, 1930: 7
