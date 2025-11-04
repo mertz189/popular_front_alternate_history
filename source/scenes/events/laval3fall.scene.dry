@@ -1,4 +1,4 @@
-title: Laval's Third Government Falls !
+title: <span style="color: #808080;">Laval's</span> Third Government Falls !
 subtitle: Government falls over the electoral law.
 view-if: chancellor == "Laval" and year = 1932 and month = 2
 on-arrival: old_chancellor = chancellor; sfio_toleration = 0; chancellor = "Tardieu"; chancellor_party = "AD";
@@ -7,6 +7,6 @@ tags: event
 max-visits: 1
 face-image: img/portraits/PapenFranz.jpg
 
-President Hindenburg's secretive group of advisors (often called the "camarilla") has turned against [+ old_chancellor +], and Hindenburg his dismissed the Chancellor, replacing him with the more reactionary Franz von Papen, an independent formerly of the Center Party. [? if year == 1932 and old_chancellor == "Brüning": Brüning's final straw was his "agricultural settlement" policy, sending unemployed workers to homestead in underutilized lands (that happen to be owned by aristocrats). ?] [? if strife > 6 : Seeing the chaos that has gripped the country, Hindenburg's advisors seem to believe that the country needs stronger, more authoritarian rulers, and they see Papen as that kind of ruler. ?]
+<span style="color: #808080;">Laval's</span> Government has fallen after the <span style="color: #c7017f;">Radical</span>-dominated Senate refused his proposal for a new electoral law. <span style="color: #808080;">Laval's</span> tenure in office lasted a little more than a year.
 
-Papen is immediately faced with a vote of no confidence, given his unpopularity. However the SFIO votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties. Meanwhile, he is governing via emergency powers with Hindenburg. His first policy is to legalize the Nazi SA, but this does not win their loyalty.
+President <span style="color: #808080;">Paul Doumer</span> chose to replace him with <span style="color: #C0A054;">André Tardieu</span>, who led the government twice in 1929-1930. Having one of our most ruthless opponents in the highest office at a time of elections hardly relieves us.
