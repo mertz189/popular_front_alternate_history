@@ -13,7 +13,7 @@ face-image: img/Rothe_Wahlen_1903.jpg
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+The Chamber of Deputies elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
@@ -283,7 +283,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PUP: {!</td><td>!} 0% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ prs_name +]: {!</td><td>!} [+ prs_r +]% {!</td><td>!} [+ str_change_prs +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#FF8000'> </div> !} PRS: {!</td><td>!} [+ prs_r +]% {!</td><td>!} [+ str_change_prs +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#c7017f'> </div> !} PRRRS: {!</td><td>!} [+ prrrs_r +]% {!</td><td>!} [+ str_change_prrrs +] {!</td></tr>!}
 
