@@ -201,6 +201,12 @@ if (Q.sapd_formed && Q.sapd_r) {
 }
 data = data.concat([
     {
+        "id": "bvp",
+        "legend": "BVP",
+        "name": "BVP",
+        "seats": Math.round(3*5),
+    },
+    {
         "id": "sfio",
         "legend": "SFIO",
         "name": "SFIO",
@@ -213,28 +219,22 @@ data = data.concat([
         "seats": Math.round(Q.prs_r*5),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
-    },
-    {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
-    },
-    {
         "id": "prrrs",
         "legend": "PRRRS",
         "name": "PRRRS",
         "seats": Math.round(Q.prrrs_r*5),
     },
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "id": "pdp",
+        "legend": "PDP",
+        "name": "PDP",
+        "seats": Math.round(Q.pdp_r*5),
+    },
+    {
+        "id": "z",
+        "legend": "Center",
+        "name": "Center",
+        "seats": Math.round((Q.z_r - 3)*5),
     },
     {
         "id": "fr",
@@ -243,11 +243,11 @@ data = data.concat([
         "seats": Math.round(Q.fr_r*5),
     },
     {
-        "id": "pdp",
-        "legend": "PDP",
-        "name": "PDP",
-        "seats": Math.round(Q.pdp_r*5),
-    },
+        "id": "other",
+        "legend": "Other",
+        "name": "Other",
+        "seats": Math.round(Q.other_r*5),
+    }
 ]);
 
 if (window && d3) {

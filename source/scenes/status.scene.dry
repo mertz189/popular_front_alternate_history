@@ -162,7 +162,7 @@ SFIO: [+ sfio_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-Z + BVP: [+ z_votes +]%
+AD: [+ z_votes +]%
 
 PCF: [+ pcf_votes +]%
 
