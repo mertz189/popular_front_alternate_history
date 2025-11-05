@@ -538,33 +538,33 @@ table {
 
 /* Styles for parties */
 .seat.pcf {
-    fill: #8B0000;
+    fill: #700000;
 }
 .seat.sfio {
-    fill: #E3000F;
+    fill: #c00000;
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
 .seat.prs {
-    fill: #DCCA4A;
+    fill: #FF8000;
+}
+.seat.prrrs {
+    fill: #c7017f;
 }
 .seat.z {
-    fill: #000;
+    fill: #C0A054;
 }
 .seat.bvp {
     fill: #69A2BE;
-}
-.seat.prrrs {
-    fill: #D5AC27;
 }
 .seat.other {
     fill: #909090;
 }
 .seat.fr {
-    fill: #3F7BC1;
+    fill: #0087DC;
 }
 .seat.pdp {
-    fill: #954B00;
+    fill: #A2D8E0;
 }
 .seat.sapd {
     fill: #C40000;
