@@ -242,7 +242,8 @@ Q.workers_prs = 0;
 Q.workers_prrrs = 0;
 Q.workers_fr = 5;
 Q.workers_pdp = 0;
-Q.workers_other = 10;
+Q.workers_pup = 2;
+Q.workers_other = 0;
 
 Q.old_middle_sfio = 5;
 Q.old_middle_pcf = 0;
@@ -251,7 +252,8 @@ Q.old_middle_prs= 10;
 Q.old_middle_prrrs = 25;
 Q.old_middle_fr = 25;
 Q.old_middle_pdp = 10;
-Q.old_middle_other = 10;
+Q.old_middle_pup = 0;
+Q.old_middle_other = 0;
 
 Q.new_middle_sfio = 5;
 Q.new_middle_pcf = 1;
@@ -260,7 +262,8 @@ Q.new_middle_prs= 25;
 Q.new_middle_prrrs = 25;
 Q.new_middle_fr = 10;
 Q.new_middle_pdp = 5;
-Q.new_middle_other = 15;
+Q.new_middle_pup = 0;
+Q.new_middle_other = 0;
 
 Q.rural_sfio = 10;
 Q.rural_pcf = 0;
@@ -269,7 +272,8 @@ Q.rural_prs= 5;
 Q.rural_prrrs = 15;
 Q.rural_fr = 45;
 Q.rural_pdp = 5;
-Q.rural_other = 10;
+Q.rural_pup = 2;
+Q.rural_other = 0;
 
 Q.unemployed_sfio = 25;
 Q.unemployed_pcf = 55;
@@ -278,7 +282,8 @@ Q.unemployed_prs = 0;
 Q.unemployed_prrrs = 0;
 Q.unemployed_fr = 5;
 Q.unemployed_pdp = 15;
-Q.unemployed_other = 9;
+Q.unemployed_pup = 2;
+Q.unemployed_other = 0;
 
 Q.catholics_sfio = 15;
 Q.catholics_pcf = 2;
@@ -287,7 +292,8 @@ Q.catholics_prs = 0;
 Q.catholics_prrrs = 5;
 Q.catholics_fr = 5;
 Q.catholics_pdp = 0;
-Q.catholics_other = 12;
+Q.catholics_pup = 2;
+Q.catholics_other = 0;
 
 
 // Current Chamber of Deputies composition
