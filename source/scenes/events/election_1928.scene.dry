@@ -279,7 +279,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#700000'> </div> !}PCF: {!</td><td>!} [+ pcf_r +]% {!</td><td>!} [+ str_change_pcf +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#660066'> </div> !} PUP: {!</td><td>!} 0% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#660066'> </div> !} PUP: {!</td><td>!} [+ pup_r +]% {!</td><td>!} [+ str_change_pup +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#FF8000'> </div> !} PRS: {!</td><td>!} [+ prs_r +]% {!</td><td>!} [+ str_change_prs +] {!</td></tr>!}
 
