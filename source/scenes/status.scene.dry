@@ -27,7 +27,7 @@ Resources available: [+ resources +]
 
 [? if sfio_in_government and (in_left_front or in_popular_front): PCF coalition dissent: [+ pcf_coalition_dissent : coalition_dissent +] ?]
 
-Internal dissent: [+ dissent_percent : dissent +]
+Internal dissent: [+ dissent_percent : dissent +] [+ dissent_percent +]
 
 = Government
 

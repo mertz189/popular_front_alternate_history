@@ -99,8 +99,8 @@ if (Q.pcf_r >= Q.sfio_r && Q.pcf_r >= Q.pdp_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.sfio_r + Q.prs_r + Q.z_r - 3;
-Q.grand_coalition = Q.sfio_r + Q.prs_r + Q.z_r + Q.prrrs_r;
+Q.weimar_coalition = Q.sfio_r + Q.prs_r + Q.z_r.toFixed(1);
+Q.grand_coalition = Q.sfio_r + Q.prs_r + Q.z_r + Q.prrrs_r.toFixed(1);
 Q.bourgeois_coalition = Q.prs_r + Q.z_r + Q.prrrs_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.prs_r + Q.prrrs_r + Q.other_r + Q.fr_r;
 Q.right_coalition = Q.z_r + Q.prrrs_r + Q.other_r + Q.fr_r;
