@@ -287,7 +287,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 SFIO: [+ sfio_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + PUP: [+ z_r +]
+Z: [+ z_r +]
 
 # 1928: 10, 1930: 13
 PCF: [+ pcf_r +]
