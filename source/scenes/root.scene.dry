@@ -293,7 +293,7 @@ Q.catholics_other = 12;
 // Current Chamber of Deputies composition
 // % of Reichstag in Jan 1928
 // source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
+// note: the Z figures also include the PUP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.sfio_r = 16.5;
@@ -303,6 +303,7 @@ Q.prs_r = 9.9;
 Q.prrrs_r = 20.6;
 Q.fr_r = 16.8;
 Q.pdp_r = 3.3;
+Q.pup_r = 0.0;
 Q.other_r = 1.2;
 
 // diff from prev
@@ -313,6 +314,7 @@ Q.old_prs_r = 9.9;
 Q.old_prrrs_r = 20.6;
 Q.old_fr_r = 16.8;
 Q.old_pdp_r = 3.3;
+Q.old_pup_r = 0.0;
 Q.old_other_r = 1.2;
 
 // sapd isn't formed yet, but it may be formed
@@ -346,8 +348,8 @@ Q.pdp_in_government = 0;
 Q.in_right_coalition = 0;
 // Weimar coalition = SFIO + Z + PRS
 Q.in_weimar_coalition = 0;
-// Grand coalition = SFIO + Z + BVP + PRS + PRRRS
-// also includes the "new grand coalition" of SFIO + Z + BVP + PRS + PRRRS + Others
+// Grand coalition = SFIO + Z + PUP + PRS + PRRRS
+// also includes the "new grand coalition" of SFIO + Z + PUP + PRS + PRRRS + Others
 Q.in_grand_coalition = 0;
 // Popular front = SFIO + KPD + Z + PRS
 Q.in_popular_front = 0;

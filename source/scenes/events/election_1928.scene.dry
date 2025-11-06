@@ -168,8 +168,6 @@ Q.reichswehr_goal_completed = 0;
 
 Q.strike_term_seen = 0;
 
-Q.z_minus_bvp_r = Q.z_r - 3;
-
 // understanding the enemy
 if (Q.pdp_r >= 15) {
     Q.understanding_enemy_timer = 2;
@@ -201,9 +199,9 @@ if (Q.sapd_formed && Q.sapd_r) {
 }
 data = data.concat([
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
+        "id": "pup",
+        "legend": "PUP",
+        "name": "PUP",
         "seats": Math.round(3*5),
     },
     {
@@ -301,11 +299,11 @@ go-to: coalition_menu
 
 Weimar Coalition (SFIO + Z + [+ prs_name +]): [+ weimar_coalition +]%
 
-Grand Coalition (SFIO + Z + BVP + [+ prs_name +] + PRRRS): [+ grand_coalition +]%
+Grand Coalition (SFIO + Z + PUP + [+ prs_name +] + PRRRS): [+ grand_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ prs_name +] + PRRRS + Others): [+ bourgeois_coalition +]%
+Bourgeois Coalition (Z + PUP + [+ prs_name +] + PRRRS + Others): [+ bourgeois_coalition +]%
 
-Right-wing Coalition (Z + BVP + PRRRS + Others + FR): [+ right_coalition +]%
+Right-wing Coalition (Z + PUP + PRRRS + Others + FR): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and pdp_r >= 15 : The rapid rise in PDP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -536,12 +534,12 @@ In response to the PCF's entrance into the government, the right-wing immediatel
 
 @right_coalition
 title: Refuse to form a government, so that a right-wing coalition may be formed.
-subtitle: Z + BVP + PRRRS + FR + Others ([+ right_coalition +]%)
+subtitle: Z + PUP + PRRRS + FR + Others ([+ right_coalition +]%)
 unavailable-subtitle: The FR is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
 choose-if: year < 1929
 
-There are enough votes for a right-wing coalition of the Center (+ BVP), PRRRS, FR, and minor conservative parties. [? if largest_party == "SFIO": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
+There are enough votes for a right-wing coalition of the Center (+ PUP), PRRRS, FR, and minor conservative parties. [? if largest_party == "SFIO": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
 
 - @right_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a right-wing coalition take power.
 - @grand_coalition: Actually, we wish to form a grand coalition after all.
@@ -618,10 +616,10 @@ The third option is to have new elections.
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
-subtitle: SFIO + Z + BVP + [+ prs_name +] + PRRRS + Others ([+ neo_weimar_coalition +]%)
+subtitle: SFIO + Z + PUP + [+ prs_name +] + PRRRS + Others ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: z_relation >= 50 and prrrs_relation >= 30
-unavailable-subtitle: SFIO + Z + BVP + [+ prs_name +] + PRRRS + Others ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prrrs_relation < 30 : We do not have adequate relations with the PRRRS. ?]
+unavailable-subtitle: SFIO + Z + PUP + [+ prs_name +] + PRRRS + Others ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prrrs_relation < 30 : We do not have adequate relations with the PRRRS. ?]
 
 How do we convince vehemently anti-socialist parties to allow us to form a majority coalition? Our largely benevolent relations with the Center and PRRRS may allow us some leverage.
 
@@ -659,7 +657,7 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: SFIO + Z + BVP + [+ prs_name +] + PRRRS + Others ([+ neo_weimar_coalition +]%)
+subtitle: SFIO + Z + PUP + [+ prs_name +] + PRRRS + Others ([+ neo_weimar_coalition +]%)
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50 and z_relation >= 10
 
 The Center Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
@@ -950,7 +948,7 @@ Rudolf Breitscheid has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: SFIO + Z + BVP + [+ prs_name +] + PRRRS ([+ grand_coalition +]%)
+subtitle: SFIO + Z + PUP + [+ prs_name +] + PRRRS ([+ grand_coalition +]%)
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
 go-to: grand_coalition_sfio_lead if (n_elections <= 1 and largest_party == "SFIO") or (largest_party == "SFIO" and sfio_r >= 30) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and ((n_elections > 1 and sfio_r < 30) or (n_elections <= 1 and largest_party != "SFIO"))
 
@@ -960,7 +958,7 @@ go-to: grand_coalition_sfio_lead if (n_elections <= 1 and largest_party == "SFIO
 @grand_coalition_z_lead
 go-to: grand_coalition_z_lead_2 if prrrs_relation >= 30; grand_coalition_fail if prrrs_relation < 30
 
-There are enough votes to form a majority coalition consisting of the SFIO, Center (Z), Bavarian People's (BVP), Democratic ([+ prs_name +]), and People's (PRRRS) parties. Given our rather weak electoral performance, [? if sfio_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_sfio = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
+There are enough votes to form a majority coalition consisting of the SFIO, Center (Z), Bavarian People's (PUP), Democratic ([+ prs_name +]), and People's (PRRRS) parties. Given our rather weak electoral performance, [? if sfio_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_sfio = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
 
 # TODO: if the SFIO participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -1067,7 +1065,7 @@ We have decided to tolerate Brüning's government. This means that we will vote 
 @grand_coalition_fail
 on-arrival: grand_coalition_failed = 1
 
-Unfortunately, the PRRRS and BVP are unwilling to enter into another coalition with the SFIO, so the grand coalition is unable to be formed.
+Unfortunately, the PRRRS and PUP are unwilling to enter into another coalition with the SFIO, so the grand coalition is unable to be formed.
 
 - @no_majority: Thus, there is no clear majority.
 - @brauns_dilemma
@@ -1084,7 +1082,7 @@ go-to: prrrs_conservative if stresemann_dead == 1; prrrs_majority if stresemann_
 @prrrs_majority
 go-to: join_bruning
 
-Under the influence of Gustav Stresemann, the PRRRS agrees to allow us into the coalition, and so does the BVP.
+Under the influence of Gustav Stresemann, the PRRRS agrees to allow us into the coalition, and so does the PUP.
 
 
 @prrrs_conservative
@@ -1118,7 +1116,7 @@ As expected, the PRRRS is too set in their anti-democratic ways.
 @grand_coalition_sfio_lead
 on-arrival: leverage -= 15 if prrrs_relation < 20
 
-As expected, the SFIO is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (BVP), Democratic ([+ prs_name +]), and People's (PRRRS) parties.
+As expected, the SFIO is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (PUP), Democratic ([+ prs_name +]), and People's (PRRRS) parties.
 
 [? if prrrs_relation < 20 : As our relation with the PRRRS is poor, they are demanding more minister posts in order to remain part of the coalition. ?]
 

@@ -78,15 +78,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Democratic Alliance" style="color: #C0A054;">AD</span>!}: [+ z_relation : relationships +] [+ z_relation +]
 
-{!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_relation : relationships +]
+{!<span class="tooltip-text" title="French Communist Party" style="color: #700000;">PCF</span>!}: [+ pcf_relation : relationships +] [+ pcf_relation +]
 
-{!<span class="tooltip-text" title="Republican-Socialist Party" style="color: #FF8000;">PRS</span>!}: [+ prs_relation : relationships +]
+{!<span class="tooltip-text" title="Republican-Socialist Party" style="color: #FF8000;">PRS</span>!}: [+ prs_relation : relationships +] [+ prs_relation +]
 
-{!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_relation : relationships +]
+{!<span class="tooltip-text" title="Radical, Republican and Radical-Socialist Party" style="color: #c7017f;">PRRRS</span>!}: [+ prrrs_relation : relationships +] [+ prrrs_relation +]
 
-{!<span class="tooltip-text" title="Republican Federation" style="color: #0087DC;">FR</span>!}: [+ fr_relation : relationships +]
+{!<span class="tooltip-text" title="Republican Federation" style="color: #0087DC;">FR</span>!}: [+ fr_relation : relationships +] [+ fr_relation +]
 
-{!<span class="tooltip-text" title="Democratic People's Party"style="color: #A2D8E0;">PDP</span>!}: [+ pdp_relation : relationships +]
+{!<span class="tooltip-text" title="Democratic People's Party"style="color: #A2D8E0;">PDP</span>!}: [+ pdp_relation : relationships +] [+ pdp_relation +]
 
 = Internal Factions of the SFIO
 
@@ -158,23 +158,23 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-SFIO: [+ sfio_votes +]%
+<span style="color: #c00000;">SFIO</span>: [+ sfio_votes +]%
 
 [? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
-AD: [+ z_votes +]%
+<span style="color: #C0A054;">AD</span>: [+ z_votes +]%
 
-PCF: [+ pcf_votes +]%
+<span style="color: #700000;">PCF</span>: [+ pcf_votes +]%
 
-[? if not prs_name: PRS?][? if prs_name != 0 : [+ prs_name +]?]: [+ prs_votes +]%
+<span style="color: #FF8000;">PRS</span>: [+ prs_votes +]%
 
-PRRRS: [+ prrrs_votes +]%
+<span style="color: #c7017f;">PRRRS</span>: [+ prrrs_votes +]%
 
-FR: [+ fr_votes +]%
+<span style="color: #0087DC;">FR</span>: [+ fr_votes +]%
 
-PDP: [+ pdp_votes +]%
+<span style="color: #A2D8E0;">PDP</span>: [+ pdp_votes +]%
 
-Others: [+ other_votes +]%
+<span style="color: #808080;">Others</span>: [+ other_votes +]%
 
 **Detailed results for each demographic**
 

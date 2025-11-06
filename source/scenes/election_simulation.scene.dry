@@ -287,7 +287,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 SFIO: [+ sfio_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+Z + PUP: [+ z_r +]
 
 # 1928: 10, 1930: 13
 PCF: [+ pcf_r +]
@@ -311,9 +311,9 @@ Other: [+ other_r +]
 
 Weimar Coalition (SFIO + Z + PRS): [+ weimar_coalition +]
 
-Grand Coalition (SFIO + Z + BVP + PRS + PRRRS): [+ grand_coalition +]
+Grand Coalition (SFIO + Z + PUP + PRS + PRRRS): [+ grand_coalition +]
 
-Bourgeois Coalition (Z + BVP + PRS + PRRRS + Others): [+ bourgeois_coalition +]
+Bourgeois Coalition (Z + PUP + PRS + PRRRS + Others): [+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + BVP + PRRRS + Others + FR): [+ right_coalition +]
+Right-wing Coalition (Z + PUP + PRRRS + Others + FR): [+ right_coalition +]
 
