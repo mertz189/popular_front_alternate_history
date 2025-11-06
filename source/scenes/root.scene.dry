@@ -228,7 +228,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['sfio', 'pcf', 'z', 'prs', 'prrrs', 'fr', 'pdp', 'pup' 'other'];
+Q.parties = ['sfio', 'pcf', 'z', 'prs', 'prrrs', 'fr', 'pdp', 'pup', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
