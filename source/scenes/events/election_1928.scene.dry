@@ -41,9 +41,6 @@ on-arrival: {!
 // set old results
 // election threshold constitutional reform
 // banning parties
-if (year == 1932) {
-    firstelectionoccured = 1;
-}
 var new_party_sum = 0;
 for (var party of Q.parties) {
     Q['old_' + party + '_r'] = Q[party + '_r'];
