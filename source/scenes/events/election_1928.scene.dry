@@ -172,6 +172,9 @@ Q.strike_term_seen = 0;
 if (Q.pdp_r >= 15) {
     Q.understanding_enemy_timer = 2;
 }
+if (year = 1932){
+    Q.1932_election_occured = 1;
+}
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -297,7 +300,7 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SFIO + Z + [+ prs_name +]): [+ weimar_coalition +].toFixed%
+Weimar Coalition (SFIO + Z + [+ prs_name +]): [+ weimar_coalition +]%
 
 Grand Coalition (SFIO + Z + PUP + [+ prs_name +] + PRRRS): [+ grand_coalition +]%
 

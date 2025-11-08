@@ -1,0 +1,9 @@
+title: Presidential Elections
+subtitle: It is time to elect a successor to Paul Doumer
+new-page: true
+view-if: year = 1932 and month = 5 and 1932_election_occured = 1;
+max-visits: 1
+
+= The Death of Paul Levi
+
+Paul Levi, a leader of the left wing of our party, has died in an unfortunate accident. He will be missed.
