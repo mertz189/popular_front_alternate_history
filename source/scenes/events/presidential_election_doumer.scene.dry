@@ -1,5 +1,6 @@
 title: Presidential Elections
 subtitle: It is time to elect a successor to Paul Doumer
+frequency : 1000
 new-page: true
 view-if: year = 1932 and month >= 5 and president = "Vacant"
 max-visits: 1
