@@ -172,7 +172,7 @@ Q.strike_term_seen = 0;
 if (Q.pdp_r >= 15) {
     Q.understanding_enemy_timer = 2;
 }
-if (year = 1932){
+if (year == 1932){
     Q.1932_election_occured = 1;
 }
 
