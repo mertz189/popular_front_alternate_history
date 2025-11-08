@@ -1,7 +1,7 @@
 title: Presidential Elections
 subtitle: It is time to elect a successor to Paul Doumer
 new-page: true
-view-if: year = 1932 and month = 5 and 1932_election_occured
+view-if: year = 1932 and month = 5 and 1932electionoccured
 max-visits: 1
 tags: event
 

@@ -173,7 +173,7 @@ if (Q.pdp_r >= 15) {
     Q.understanding_enemy_timer = 2;
 }
 if (year == 1932){
-    Q.1932_election_occured = 1;
+    Q.1932electionoccured = 1;
 }
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
