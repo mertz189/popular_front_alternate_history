@@ -48,4 +48,6 @@ Results:
 
 <span style="color: #700000;">Marcel Cachin</span> - [+ cachin_votes +]%
 
+<span style="color: #808080;">Others</span> - [+ other_votes +]%
+
 With [+ lebrun_votes +]% of the votes, <span style="color: #C0A054;">Albert Lebrun</span> has been elected President !
