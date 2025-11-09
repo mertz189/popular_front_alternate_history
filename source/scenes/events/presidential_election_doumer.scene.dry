@@ -30,9 +30,6 @@ Q.cachin_votes = 0;
 
 Q.lebrun_votes += Q.na_z_r;
 Q.lebrun_votes += Q.na_fr_r;
-Q.lebrun_votes += Q.na_prs_r;
-Q.lebrun_votes += Q.na_prrrs_r;
-Q.lebrun_votes += Q.na_pdp_r;
 Q.lebrun_votes += Q.na_others_r;
 Q.faure_votes += Q.na_sfio_r;
 Q.cachin_votes += Q.na_pcf_r;
