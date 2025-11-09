@@ -323,6 +323,16 @@ Q.old_pdp_r = 3.3;
 Q.old_pup_r = 0.0;
 Q.old_other_r = 1.2;
 
+Q.senate_sfio_r = 5.1;
+Q.senate_pcf_r = 0.0;
+Q.senate_z_r = 30.0;
+Q.senate_prs_r = 4.2;
+Q.senate_prrrs_r = 47.7;
+Q.senate_fr_r = 9.2;
+Q.senate_pdp_r = 0.0;
+Q.senate_pup_r = 0.0;
+Q.senate_other_r = 3.8;
+
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
