@@ -26,3 +26,4 @@ on-arrival: prrrs_relation -= 5; president = "Lebrun";
 title: Do not attempt a joint left-wing candidacy, and nominate Paul Faure instead.
 subtitle: There is no hope for Painlevé, so we will nominate our General Secretary.
 on-arrival: president = "Lebrun";
+
