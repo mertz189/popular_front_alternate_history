@@ -12,8 +12,6 @@ On May 10th, the Senate and the Chamber of Deputies convened to elect a new Pres
 
 Unfortunately for us, the new Chamber of Deputies did not have the time to convene, and it is thus the <span style="color: #C0A054;">right-</span><span style="color: #0087DC;">wing</span> dominated Chamber elected in 1928 that will take part in the election. Due to this and our weak presence in the Senate, it is certain that the next president will not be a <span style="color: #c00000;">socialist</span>. However, given the <span style="color: #c7017f;">Radical</span> strength in the upper house, a joint candidate of the Left might certainly win.
 
-[+ na_sfio_r +]%
-
 - @painleve
 - @paulfaure
 
@@ -25,5 +23,15 @@ on-arrival: prrrs_relation -= 5; president = "Lebrun";
 @paulfaure
 title: Do not attempt a joint left-wing candidacy, and nominate Paul Faure instead.
 subtitle: There is no hope for Painlevé, so we will nominate our General Secretary.
-on-arrival: president = "Lebrun";
+on-arrival: {!
+Q.lebrun_votes = 0;
+Q.faure_votes = 0;
+Q.cachin_votes = 0;
 
+Q.cachin_votes += Q.na_pcf_r
+
+!}
+
+Results:
+
+Marcel Cachin - [+ cachin_votes +]%
