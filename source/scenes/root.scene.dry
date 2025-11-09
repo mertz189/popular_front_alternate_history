@@ -342,7 +342,7 @@ Q.na_prrrs_r = Math.round(((Q.old_prrrs_r*6)+(Q.senate_prrrs_r*3.15))/9.15);
 Q.na_fr_r = Math.round(((Q.old_fr_r*6)+(Q.senate_fr_r*3.15))/9.15);
 Q.na_pdp_r = Math.round(((Q.old_pdp_r*6)+(Q.senate_pdp_r*3.15))/9.15);
 Q.na_pup_r = Math.round(((Q.old_pup_r*6)+(Q.senate_pup_r*3.15))/9.15);
-Q.na_others_r = Math.round(((Q.old_others_r*6)+(Q.senate_others_r*3.15))/9.15);
+Q.na_other_r = Math.round(((Q.old_other_r*6)+(Q.senate_other_r*3.15))/9.15);
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
