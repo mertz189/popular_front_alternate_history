@@ -15,8 +15,14 @@ Unfortunately for us, the new Chamber of Deputies did not have the time to conve
 [+ na_sfio_r +]%
 
 - @painleve
+- @paulfaure
 
 @painleve 
 title: Propose Paul Painlevé's candidacy.
 subtitle: A member of the <span style="color: #FF8000;">PRS</span>, Painlevé is acceptable to the whole left, but is he the preferred candidate of the <span style="color: #c7017f;">Radicals</span> ?
-on-arrival: prrrs_relation -= 5
+on-arrival: prrrs_relation -= 5 president = "Lebrun";
+
+@paulfaure
+title: Do not attempt a joint left-wing candidacy, and nominate Paul Faure instead.
+subtitle: There is no hope for Painlevé, so we will nominate our General Secretary.
+on-arrival: president = "Lebrun";
