@@ -549,6 +549,18 @@ img {
   width: 1em;
 }
 
+.box2 {
+  display: inline-block;
+  height: 1em;
+  width: 0.5em;
+}
+
+.box3 {
+  display: inline-block;
+  height: 1em;
+  width: 0.75em;
+}
+
 table {
     border-spacing: 0.5em;
 }
