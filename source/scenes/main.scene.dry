@@ -1,6 +1,7 @@
 title: Next month
 set-bg: img/map_2.jpg
 is-hand: true
+max-cards: 3
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - an action is available.';
@@ -55,7 +56,6 @@ if (boxes.length >= 2) {
 }
 !}
 
-max-cards: 3
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
