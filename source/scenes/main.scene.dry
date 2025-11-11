@@ -2,6 +2,13 @@ title: Next month
 set-bg: img/map_2.jpg
 is-hand: true
 on-arrival: {!
+if (Q.advisor_action_timer <= 0) {
+    Q.pinnedCardsDescription = 'Advisors - an action is available.';
+} else if (Q.advisor_action_timer == 1) {
+    Q.pinnedCardsDescription = 'Advisors - next action available in 1 month.';
+} else {
+    Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
+}
 const boxes = document.querySelectorAll('.scrollable-box');
 if (boxes.length >= 2) {
     boxes[1].remove();
@@ -54,6 +61,8 @@ max-cards: 3
 
 {!<div class="scrollable-box">!}
 
+{!<p class="other">!}[? if year = 1932 and month = 1 : There have been brighter times for French democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. War Minister André Maginot, a veteran of the Great War and namesake of the Maginot Line, has passed away. Prime Minister <span style="color: #808080;">Laval</span> has appointed <span style="color: #C0A054;">André Tardieu</span> to his post.?]{!</p>!}
+
 {!<p class="other">!}[? if year = 1932 and month = 3 : Aristide Briand ripppp. ?]{!</p>!}
 
 {!</div>!}
@@ -74,8 +83,59 @@ if (Q.advisor_action_timer <= 0) {
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
+const boxes = document.querySelectorAll('.scrollable-box');
+if (boxes.length >= 2) {
+    boxes[1].remove();
+}
+Q.last_time_updated = Q.time;
+if (Q.week) Q.last_week_updated = Q.week;
 !}
+on-display: {!
+if (!document.getElementById('news_tab')) {
+    var button = document.createElement('button');
+    button.style.backgroundColor = '#dddddd';
+    button.className = 'tab_button';
+    button.id = 'news_tab';
+    button.textContent = 'View Right-Wing News';
+    button.onclick = function () {
+        toggleNews();
+    };
+    var contentDiv = document.getElementById('content');
+    contentDiv.appendChild(button);
+    const elements = document.querySelectorAll('.dnvp');
+    let hasTextContent = false;
+    elements.forEach(function (element) {
+        if (element.textContent.trim() !== '') {
+            hasTextContent = true;
+        }
+    });
+    if (hasTextContent) {
+        button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // New color
+    } else {
+        button.style.backgroundColor = '#dddddd'; // Original color
+    }
+    document.querySelectorAll('p').forEach(p => {
+        if (!p.textContent.trim()) {
+            p.remove();
+        }
+    });
+}
 
+const scrollableBox = document.querySelector('div.scrollable-box');
+const boxes = document.querySelectorAll('.scrollable-box');
+if (boxes.length >= 2) {
+    boxes[1].remove();
+}
+!}
+max-cards: 4
+
+{!<div class="scrollable-box">!}
+
+{!<p class="other">!}[? if year = 1932 and month = 1 : There have been brighter times for French democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. War Minister André Maginot, a veteran of the Great War and namesake of the Maginot Line, has passed away. Prime Minister <span style="color: #808080;">Laval</span> has appointed <span style="color: #C0A054;">André Tardieu</span> to his post.?]{!</p>!}
+
+{!<p class="other">!}[? if year = 1932 and month = 3 : Aristide Briand ripppp. ?]{!</p>!}
+
+{!</div>!}
 
 
 - @party
