@@ -59,6 +59,7 @@ if (boxes.length >= 2) {
 
 {!</div>!}
 !}
+!}
 
 max-cards: 3
 
