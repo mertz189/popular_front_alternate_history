@@ -2,18 +2,13 @@ title: Next month
 set-bg: img/map_2.jpg
 is-hand: true
 on-arrival: {!
-if (Q.advisor_action_timer <= 0) {
-    Q.pinnedCardsDescription = 'Advisors - an action is available.';
-} else if (Q.advisor_action_timer == 1) {
-    Q.pinnedCardsDescription = 'Advisors - next action available in 1 month.';
-} else {
-    Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
-}
 const boxes = document.querySelectorAll('.scrollable-box');
 if (boxes.length >= 2) {
     boxes[1].remove();
 }
 Q.last_time_updated = Q.time;
+if (Q.week) Q.last_week_updated = Q.week;
+!}
 on-display: {!
 if (!document.getElementById('news_tab')) {
     var button = document.createElement('button');
@@ -46,10 +41,12 @@ if (!document.getElementById('news_tab')) {
 }
 
 const scrollableBox = document.querySelector('div.scrollable-box');
+
 const boxes = document.querySelectorAll('.scrollable-box');
 if (boxes.length >= 2) {
     boxes[1].remove();
 }
+!}
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
@@ -58,8 +55,6 @@ if (boxes.length >= 2) {
 {!<p class="other">!}[? if year = 1932 and month = 3 : Aristide Briand ripppp. ?]{!</p>!}
 
 {!</div>!}
-!}
-!}
 
 max-cards: 3
 
