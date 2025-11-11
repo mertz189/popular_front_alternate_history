@@ -452,6 +452,38 @@ img {
     top: 50%;
 }
 
+p {
+  margin: 0;
+  margin-bottom: 0.9em;
+  text-indent: 1em;
+}
+
+p.dnvp {
+  display: none;
+}
+
+p.other {
+  display: block;
+}
+
+.scrollable-box {
+  width: 540px;
+  /* Default width */
+  height: 200px;
+  /* Fixed height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+.scrollable-box {
+  width: 540px;
+  /* Default width */
+  height: 200px;
+  /* Fixed height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
 /* smaller screens: hide left margin */
 @media screen and (max-width: 1200px) {
   .tools {
