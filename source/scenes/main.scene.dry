@@ -63,7 +63,7 @@ if (boxes.length >= 2) {
 
 {!<p class="other">!}[? if year = 1932 and month = 1 : There have been brighter times for French democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. War Minister André Maginot, a veteran of the Great War and namesake of the Maginot Line, has passed away. Prime Minister <span style="color: #808080;">Laval</span> has appointed <span style="color: #C0A054;">André Tardieu</span> to his post.?]{!</p>!}
 
-{!<p class="other">!}[? if year = 1932 and month = 3 : Aristide Briand ripppp. ?]{!</p>!}
+{!<p class="other">!}[? if year = 1932 and month = 3 : Aristide Briand, longtime leader of the <span style="color: #FF8000;">PRS</span> has passed away. He served several times as Prime Minister and Foreign Minister, leading our negotiations with the Germans. ?]{!</p>!}
 
 {!</div>!}
 
