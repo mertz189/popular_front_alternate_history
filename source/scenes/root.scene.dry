@@ -106,7 +106,7 @@ Q.pcf_relation = 25;
 Q.prs_relation = 70;
 Q.prrrs_relation = 50;
 // FR and PDP are invariably hostile
-Q.fr_relation = 10;
+Q.fr_relation = 0;
 Q.pdp_relation = 30;
 
 Q.pcf_leader = "Thälmann";
