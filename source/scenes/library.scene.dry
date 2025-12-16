@@ -210,15 +210,15 @@ go-to: menu
 
 Current relations: [+ z_relation : relationships +]
 
-**<span style="color: #FF8000;">**PRS**</span>** - *Parti Républican-Socialiste* (Republican-Socialist Party) - a party founded by the most reformist-minded socialists who refused to join the SFIO, they are positioned between us and the Radicals and have taken part in the Left Cartel. Its members generally take part in centrist governments, notably with its famous figures Painlevé and Briand, but we hold friendly relations with them. 
+<span style="color: #FF8000;">**PRS**</span> - *Parti Républican-Socialiste* (Republican-Socialist Party) - a party founded by the most reformist-minded socialists who refused to join the SFIO, they are positioned between us and the Radicals and have taken part in the Left Cartel. Its members generally take part in centrist governments, notably with its famous figures Painlevé and Briand, but we hold friendly relations with them. 
 
 Current relations: [+ prs_relation : relationships +]
 
-**PRRRS** - *Parti Républicain, Radical et Radical-Socialiste* (Republican, Radical and Radical-Socialist Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+<span style="color: #c7017f;">**PRRRS**</span> - *Parti Républicain, Radical et Radical-Socialiste* (Republican, Radical and Radical-Socialist Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
 
 Current relations: [+ prrrs_relation : relationships +]
 
-**<span style="color: #0087DC;">**FR**</span>** - *Fédération Républicaine* (Republican Federation) - a strongly nationalist, conservative and Catholic group, they are the party of the Right, of reaction even. We expect them to be our fiercest adversaries on our way to power, especially given that some of their members have tied with the far-right Leagues.
+<span style="color: #0087DC;">**FR**</span> - *Fédération Républicaine* (Republican Federation) - a strongly nationalist, conservative and Catholic group, they are the party of the Right, of reaction even. We expect them to be our fiercest adversaries on our way to power, especially given that some of their members have tied with the far-right Leagues.
 
 Current relations: [+ fr_relation : relationships +]
 
@@ -228,7 +228,7 @@ Current relations: [+ pcf_relation : relationships +]
 
 [? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SFIO, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SFIO and PCF. ?]
 
-**<span style="color: #A2D8E0;">**PDP**</span>** - *Parti Démocratique Populaire* (People's Democratic Party) - A small Christian Democratic party formed with the Vatican's goodwill, they are less reactionary than the Fédération Républicaine, but generally insist on governing in coalition with them.
+<span style="color: #A2D8E0;">**PDP**</span> - *Parti Démocratique Populaire* (People's Democratic Party) - A small Christian Democratic party formed with the Vatican's goodwill, they are less reactionary than the Fédération Républicaine, but generally insist on governing in coalition with them.
 
 Current relations: [+ pdp_relation : relationships +]
 
