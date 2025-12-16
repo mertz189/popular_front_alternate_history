@@ -210,8 +210,7 @@ go-to: menu
 
 Current relations: [+ z_relation : relationships +]
 
-# TODO: replace this with the german state party after 1930
-**PRS** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+**<span style="color: #FF8000;">**PRS**</span>** - *Parti Républican-Socialiste* (Republican-Socialist Party) - a party founded by the most reformist-minded socialists who refused to join the SFIO, they are positioned between us and the Radicals and have taken part in the Left Cartel. Its members generally take part in centrist governments, notably with its famous figures Painlevé and Briand, but we hold friendly relations with them. 
 
 Current relations: [+ prs_relation : relationships +]
 
@@ -219,21 +218,21 @@ Current relations: [+ prs_relation : relationships +]
 
 Current relations: [+ prrrs_relation : relationships +]
 
-**FR** - *Fédération Républicaine* (Republican Federation) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
+**<span style="color: #0087DC;">**FR**</span>** - *Fédération Républicaine* (Republican Federation) - a strongly nationalist, conservative and Catholic group, they are the party of the Right, of reaction even. We expect them to be our fiercest adversaries on our way to power, especially given that some of their members have tied with the far-right Leagues.
 
 Current relations: [+ fr_relation : relationships +]
 
-<span style="color: #700000;">**PCF**</span> - *Parti Communiste Français* (French Communist Party) - our lost brothers. Split from us at the Tours Congress of 1920 over the decision to join the Third Internationale. While they initially took a majority of the SFIO, subsequent purges and the thorough Bolchevization of the Communists have weakened them and they only hold a handful of seats now. Under the Komintern's "class against class" policy, they view us as no better than the right-wing parties.
+<span style="color: #700000;">**PCF**</span> - *Parti Communiste Français* (French Communist Party) - our lost brothers. Split from us at the Tours Congress of 1920 over the decision to join the Third Internationale. While they initially took a majority of the SFIO, subsequent purges and the thorough Bolshevization of the Communists have weakened them and they only hold a handful of seats now. Under the Komintern's "class against class" policy, they view us as no better than the right-wing parties.
 
 Current relations: [+ pcf_relation : relationships +]
 
 [? if sapd_formed: SAPD - Sozialistische Arbeiterpartei Deutschlands (Socialist Worker's Party of Germany) - a party recently formed in a split from the SFIO, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SFIO and PCF. ?]
 
-**PDP** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party. Led by Adolf Hitler, they attempted a coup in 1923, and were banned for it, but have since been legalized.
+**<span style="color: #A2D8E0;">**PDP**</span>** - *Parti Démocratique Populaire* (People's Democratic Party) - A small Christian Democratic party formed with the Vatican's goodwill, they are less reactionary than the Fédération Républicaine, but generally insist on governing in coalition with them.
 
 Current relations: [+ pdp_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRRRS and FR. 
+**Other parties** - there is a multitude of other small parties. 
 
 @paramilitaries
 on-arrival: {!

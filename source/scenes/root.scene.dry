@@ -101,10 +101,10 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
+Q.z_relation = 35;
 Q.pcf_relation = 25;
-Q.prs_relation = 60;
-Q.prrrs_relation = 50;
+Q.prs_relation = 70;
+Q.prrrs_relation = 55;
 // FR and PDP are invariably hostile
 Q.FR_relation = 10;
 Q.PDP_relation = 30;

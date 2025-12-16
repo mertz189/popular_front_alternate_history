@@ -10,7 +10,7 @@ priority: -1000
 
 On May 10th, the Senate and the Chamber of Deputies convened to elect a new President after Paul Doumer's demise. His potential successor will have to gather a majority of the votes cast in order to win. 
 
-Unfortunately for us, the new Chamber of Deputies did not have the time to convene, and it is thus the <span style="color: #C0A054;">right-</span><span style="color: #0087DC;">wing</span> dominated Chamber elected in 1928 that will take part in the election. Due to this and our weak presence in the Senate, it is certain that the next president will not be a <span style="color: #c00000;">socialist</span>. However, given the <span style="color: #c7017f;">Radical</span> strength in the upper house, a joint candidate of the Left might certainly win.
+Unfortunately for us, the new Chamber of Deputies did not have the time to convene, and it is thus the <span style="color: #C0A054;">right-</span><span style="color: #0087DC;">wing</span> dominated Chamber elected in 1928 that will take part in the vote. Due to this and our weak presence in the Senate, it is certain that the next president will not be a <span style="color: #c00000;">socialist</span>. However, given the <span style="color: #c7017f;">Radical</span> strength in the upper house, a joint candidate of the Left might certainly win.
 
 - @painleve
 - @paulfaure
@@ -18,7 +18,37 @@ Unfortunately for us, the new Chamber of Deputies did not have the time to conve
 @painleve 
 title: Propose Paul Painlevé's candidacy.
 subtitle: A member of the <span style="color: #FF8000;">PRS</span>, Painlevé is acceptable to the whole left, but is he the preferred candidate of the <span style="color: #c7017f;">Radicals</span> ?
-on-arrival: prrrs_relation -= 5; president = "Lebrun";
+on-arrival: {!
+Q.lebrun_votes = 0;
+Q.faure_votes = 0;
+Q.cachin_votes = 0;
+Q.other_votes = 0;
+
+Q.lebrun_votes += Q.na_z_r;
+Q.lebrun_votes += Q.na_prrrs_r;
+Q.lebrun_votes += Q.na_prs_r;
+Q.lebrun_votes += Q.na_fr_r;
+Q.lebrun_votes += Q.na_pdp_r;
+Q.faure_votes += Q.na_sfio_r;
+Q.cachin_votes += Q.na_pcf_r;
+Q.other_votes += Q.na_other_r;
+president = "Lebrun";
+prrrs_relation -= 5;
+!}
+
+Unfortunately, the <span style="color: #c7017f;">Radicals</span> are unwilling to support Painlevé's candidacy, a fact that has slightly strained our relations. We thus proceed with the nomination of our general secretary, Paul Faure.
+
+Results:
+
+<span style="color: #C0A054;">Albert Lebrun</span> - [+ lebrun_votes +]%
+
+<span style="color: #c00000;">Paul Faure</span> - [+ faure_votes +]%
+
+<span style="color: #700000;">Marcel Cachin</span> - [+ cachin_votes +]%
+
+<span style="color: #808080;">Others</span> - [+ other_votes +]%
+
+With [+ lebrun_votes +]% of the votes, <span style="color: #C0A054;">Albert Lebrun</span> has been elected President !
 
 @paulfaure
 title: Do not attempt a joint left-wing candidacy, and nominate Paul Faure instead.
@@ -37,7 +67,7 @@ Q.lebrun_votes += Q.na_pdp_r;
 Q.faure_votes += Q.na_sfio_r;
 Q.cachin_votes += Q.na_pcf_r;
 Q.other_votes += Q.na_other_r;
-
+president = "Lebrun";
 !}
 
 Results:
