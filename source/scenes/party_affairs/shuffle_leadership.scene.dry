@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: center_advisor, left_advisor, neosocialist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -70,14 +70,14 @@ go-to: rm_main
 
 Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 
-# reformists
+# neosocialists
 
 
 @remove_severing
 title: Remove Severing
 view-if: severing_advisor = 1
 tags: remove_advisor
-on-arrival: severing_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: severing_advisor = 0; neosocialist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Severing has been removed as an advisor. The Reformist faction disapproves.
@@ -86,7 +86,7 @@ Severing has been removed as an advisor. The Reformist faction disapproves.
 title: Remove Braun
 view-if: braun_advisor = 1
 tags: remove_advisor
-on-arrival: braun_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: braun_advisor = 0; neosocialist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Braun has been removed as an advisor. The Reformist faction disapproves.
@@ -95,7 +95,7 @@ Braun has been removed as an advisor. The Reformist faction disapproves.
 title: Remove Juchacz
 view-if: juchacz_advisor = 1
 tags: remove_advisor
-on-arrival: juchacz_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: juchacz_advisor = 0; neosocialist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Juchacz has been removed as an advisor. The Reformist faction disapproves.
@@ -104,7 +104,7 @@ Juchacz has been removed as an advisor. The Reformist faction disapproves.
 title: Remove Pfülf
 view-if: pfulf_advisor = 1
 tags: remove_advisor
-on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: pfulf_advisor = 0; neosocialist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Pfülf has been removed as an advisor. The Reformist faction disapproves.
@@ -231,7 +231,7 @@ Schumacher has been removed as an advisor. The Neorevisionist faction disapprove
 
 ## nonfactional
 
-# tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
+# tbh I'm not sure if Baade should be a neosocialist or nonfactional. same for stampfer. they were vaguely neosocialist-aligned but had pretty different ideas from the other neosocialists here. so they're non-factional.
 
 @remove_baade
 title: Remove Baade
@@ -286,13 +286,13 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: center_advisor, left_advisor, neosocialist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
 - @centrist: Add Centrists
 - @left: Add Leftists
-- @reformist: Add Reformists
+- @neosocialist: Add Reformists
 - @labor: Add Labor
 - @neorev: Add Neorevisionists
 - @nonfactional: Add non-factional advisors
@@ -304,10 +304,10 @@ view-if: n_advisors < 3
 
 - #center_advisor
 
-@reformist
+@neosocialist
 view-if: n_advisors < 3
 
-- #reformist_advisor
+- #neosocialist_advisor
 
 @left
 view-if: n_advisors < 3
@@ -377,7 +377,7 @@ tags: center_advisor
 
 Rudolf Breitscheid is now an advisor.
 
-# reformist
+# neosocialist
 
 
 @add_severing
@@ -385,9 +385,9 @@ title: Carl Severing
 subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
 card-image: img/portraits/SeveringCarl.jpg
-tags: reformist_advisor
+tags: neosocialist_advisor
 view-if: severing_advisor = 0 and n_advisors < 3
-on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5
+on-arrival: severing_advisor = 1; n_advisors += 1; neosocialist_strength += 5
 go-to: advisor_menu
 
 Carl Severing is now an advisor.
@@ -397,9 +397,9 @@ title: Otto Braun
 subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
 is-card: true
 card-image: img/portraits/BraunOtto.jpg
-tags: reformist_advisor
+tags: neosocialist_advisor
 view-if: braun_advisor = 0 and n_advisors < 3
-on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5
+on-arrival: braun_advisor = 1; n_advisors += 1; neosocialist_strength += 5
 go-to: advisor_menu
 
 Otto Braun is now an advisor.
@@ -410,9 +410,9 @@ subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organiz
 is-card: true
 card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3
-on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
+on-arrival: juchacz_advisor = 1; n_advisors += 1; neosocialist_strength += 5
 go-to: advisor_menu
-tags: reformist_advisor
+tags: neosocialist_advisor
 
 Marie Juchacz is now an advisor.
 
@@ -424,7 +424,7 @@ card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
 on-arrival: pfulf_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: reformist_advisor
+tags: neosocialist_advisor
 
 Antonie Pfülf is now an advisor.
 
@@ -562,7 +562,7 @@ Carlo Mierendorff is now an advisor.
 
 @add_schumacher
 title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
+subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors neosocialist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/SchumacherKurt.jpg
 tags: neorev_advisor

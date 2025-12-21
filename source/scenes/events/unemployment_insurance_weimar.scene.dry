@@ -19,7 +19,7 @@ In the midst of all this, our unemployment insurance program is underfunded; the
 
 @cut_benefits
 subtitle: The workers will regard this as a betrayal.
-on-arrival: workers_sfio -= 0.12*workers_sfio; unemployed_sfio -= 0.2*unemployed_sfio; workers_pcf += 6; workers_pdp += 6; unemployed_pcf += 5; unemployed_pdp += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; pcf_relation -= 8; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.4;
+on-arrival: workers_sfio -= 0.12*workers_sfio; unemployed_sfio -= 0.2*unemployed_sfio; workers_pcf += 6; workers_pdp += 6; unemployed_pcf += 5; unemployed_pdp += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; neosocialist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; pro_republic -= 4; pcf_relation -= 8; inflation -= 2; unemployment_insurance_threshold = unemployed; unemployment_insurance_timer = 10; economic_growth -= 0.4;
 
 For budgetary reasons, we have cut unemployment insurance benefits. Unfortunately, our reasons for fiscal discipline are alien to the workers. They are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the PCF's gain, and even the PDP, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 

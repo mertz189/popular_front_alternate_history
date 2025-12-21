@@ -27,7 +27,7 @@ on-arrival: resources -= 1; pcf_inter_party_seen += 1
 go-to: pcf_blutmai if blutmai = 1; pcf_1 if blutmai = 0 and pcf_coalition_success = 0 and (pcf_relation < 40 or pcf_rectified_history = 1); pcf_rectification_of_history if pcf_relation >= 40 and pcf_rectified_history = 0; pcf_2 if pcf_coalition_success = 1 and pcf_rectified_history = 1
 
 @pcf_1
-on-arrival: pcf_relation += 6*(1 - dissent); communist_coalition += 1 if pcf_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; prrrs_relation -= 3
+on-arrival: pcf_relation += 6*(1 - dissent); communist_coalition += 1 if pcf_inter_party_seen <= 1; neosocialist_dissent += 2; z_relation -= 2; prrrs_relation -= 3
 
 The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
 
@@ -41,11 +41,11 @@ For further improvements in PCF relations, it might be necessary to expel Noske,
 - @no_history: No, we have no need to apologize.
 
 @yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; pcf_rectified_history = 1; z_relation -= 6; prrrs_relation -= 6; prs_relation -= 4; pcf_relation += 8*(1-dissent); coalition_dissent += 1
+on-arrival: neosocialist_dissent += 12; neosocialist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; pcf_rectified_history = 1; z_relation -= 6; prrrs_relation -= 6; prs_relation -= 4; pcf_relation += 8*(1-dissent); coalition_dissent += 1
 
 As part of normalizing relations with the PCF, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
 
-This leads to tensions with the moderates and reformists within our party, and criticism from the conservative and liberal parties.
+This leads to tensions with the moderates and neosocialists within our party, and criticism from the conservative and liberal parties.
 
 @no_history
 on-arrival: pcf_relation -= 3
@@ -54,12 +54,12 @@ We have no need to apologize for the actions of Ebert and Noske; it is the Commu
 
 
 @pcf_2
-on-arrival: pcf_relation += 8*(1 - dissent); communist_coalition += 1 if pcf_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; prrrs_relation -= 3
+on-arrival: pcf_relation += 8*(1 - dissent); communist_coalition += 1 if pcf_inter_party_seen <= 1; neosocialist_dissent += 2; z_relation -= 3; prrrs_relation -= 3
 
 After the success of the coalition government with the PCF, they are much more amenable to us.
 
 @pcf_blutmai
-on-arrival: pcf_relation += 3*(1 - dissent); reformist_dissent += 1
+on-arrival: pcf_relation += 3*(1 - dissent); neosocialist_dissent += 1
 
 After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
 

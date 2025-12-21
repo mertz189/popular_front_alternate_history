@@ -18,8 +18,8 @@ After our discussion with the Soviets, we are inclined to believe that Stalin is
 
 @conciliator_success
 title: The Conciliators are the new leadership of the PCF.
-choose-if: (levi_advisor or rosenfeld_advisor) and (left_strength >= reformist_strength) and (pcf_relation >= 50) 
-unavailable-subtitle: [?  if not levi_advisor and not rosenfeld_advisor: Our party leadership is not left-wing enough. ?] [? if left_strength < reformist_strength: The Comintern doubts our commitment to socialism. ?]
+choose-if: (levi_advisor or rosenfeld_advisor) and (left_strength >= neosocialist_strength) and (pcf_relation >= 50) 
+unavailable-subtitle: [?  if not levi_advisor and not rosenfeld_advisor: Our party leadership is not left-wing enough. ?] [? if left_strength < neosocialist_strength: The Comintern doubts our commitment to socialism. ?]
 on-arrival: pcf_party_leader = "Conciliators"; communist_coalition += 3; pcf_relation += 10*(1-dissent); left_strength += 5; left_dissent -= 8
 achievement: versohnler
 
