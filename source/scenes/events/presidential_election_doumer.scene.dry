@@ -34,7 +34,7 @@ Q.lebrun_votes += Q.na_pdp_r;
 Q.faure_votes += Q.na_sfio_r;
 Q.cachin_votes += Q.na_pcf_r;
 Q.other_votes += Q.na_other_r;
-president = "Lebrun";
+Q.president = "Lebrun";
 prrrs_relation -= 5;
 !}
 
@@ -69,7 +69,7 @@ Q.lebrun_votes += Q.na_pdp_r;
 Q.faure_votes += Q.na_sfio_r;
 Q.cachin_votes += Q.na_pcf_r;
 Q.other_votes += Q.na_other_r;
-president = "Lebrun";
+Q.president = "Lebrun";
 !}
 
 Results:
