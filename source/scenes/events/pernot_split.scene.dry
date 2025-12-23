@@ -3,7 +3,10 @@ view-if: year = 1932 and month = 6
 frequency: 1000
 max-visits: 1
 tags: event
-on-arrival: {! Q.fr_r -= 3.0; Q.other_r += 3.0;!}
+on-arrival: {! 
+Q.fr_r = Math.round(Q.fr_r - 3);
+Q.other_r += 3.0; 
+!}
 new-page: true
 on-display: {!  
     var cardEl = document.createElement('div');  
