@@ -5,10 +5,23 @@ max-visits: 1
 tags: event
 on-arrival: {! Q.fr_r - 3; Q.other_r += 3;!}
 new-page: true
-face-image: img/portraits/PernotGeorges.jpg
+on-display: {!  
+    var cardEl = document.createElement('div');  
+    cardEl.className = "face-figure2";  
+
+    var image = new Image();  
+    image.className = "face-img";  
+    image.src = "img/portraits/PernotGeorges.jpg";  
+
+    cardEl.appendChild(image);  
+    var contentDiv = document.querySelector("#page #mid_panel #content");
+    contentDiv.appendChild(cardEl);
+!}
 
 = Moderates split from the <span style="color: #0087DC;">FR</span> !
 
 At the convening of the newly elected Chamber of Deputies, Georges Pernot, a <span style="color: #0087DC;">FR</span> lawmaker from Doubs has refused to rejoin his party's parliamentary group.
+
 Pernot, who served as minister in the Tardieu cabinet, is more supportive of the late Aristide Briand's policy of conciliation towards Germany than his staunchly nationalist party. He is also quite inclined to take part in ministerial combinations. Thus, with seventeen other like-minded deputies, he has founded his own "Republican and Social" parliamentary group.
+
 This is bad news for us, and good news for Concentration-minded <span style="color: #c7017f;">Radicals</span>, as they find a new ally in their design of a government excluding both us and the <span style="color: #0087DC;">FR</span>. Some also worry that the departure of moderates like Pernot will accentuate the Fédération's dangerous flirtation with the far-right. 
