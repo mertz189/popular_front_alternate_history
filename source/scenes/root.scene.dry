@@ -265,15 +265,15 @@ Q.new_middle_pdp = 5;
 Q.new_middle_pup = 0;
 Q.new_middle_other = 0;
 
-Q.rural_sfio = 10;
-Q.rural_pcf = 0;
-Q.rural_z = 5;
-Q.rural_prs= 5;
-Q.rural_prrrs = 15;
-Q.rural_fr = 45;
-Q.rural_pdp = 5;
+Q.rural_sfio = 24;
+Q.rural_pcf = 12;
+Q.rural_z = 6;
+Q.rural_prs = 4;
+Q.rural_prrrs = 26;
+Q.rural_fr = 20;
+Q.rural_pdp = 4;
 Q.rural_pup = 2;
-Q.rural_other = 0;
+Q.rural_other = 2;
 
 Q.unemployed_sfio = 25;
 Q.unemployed_pcf = 55;
@@ -285,15 +285,15 @@ Q.unemployed_pdp = 15;
 Q.unemployed_pup = 2;
 Q.unemployed_other = 0;
 
-Q.catholics_sfio = 15;
-Q.catholics_pcf = 2;
-Q.catholics_z = 50;
-Q.catholics_prs = 0;
-Q.catholics_prrrs = 5;
-Q.catholics_fr = 5;
-Q.catholics_pdp = 0;
-Q.catholics_pup = 2;
-Q.catholics_other = 0;
+Q.catholics_sfio = 4;
+Q.catholics_pcf = 1;
+Q.catholics_z = 11;
+Q.catholics_prs = 2;
+Q.catholics_prrrs = 6;
+Q.catholics_fr = 46;
+Q.catholics_pdp = 28;
+Q.catholics_pup = 0;
+Q.catholics_other = 2;
 
 
 // Current Chamber of Deputies composition
