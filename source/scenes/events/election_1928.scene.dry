@@ -99,7 +99,7 @@ if (Q.pcf_r >= Q.sfio_r && Q.pcf_r >= Q.pdp_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.sfio_r + Q.prs_r + Q.z_r;
+Q.left_cartel_coalition = Q.sfio_r + Q.prs_r + Q.prrrs_r;
 Q.grand_coalition = Q.sfio_r + Q.prs_r + Q.z_r + Q.prrrs_r;
 Q.bourgeois_coalition = Q.prs_r + Q.z_r + Q.prrrs_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.prs_r + Q.prrrs_r + Q.other_r + Q.fr_r;
@@ -298,7 +298,7 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SFIO + Z + [+ prs_name +]): [+ weimar_coalition +]%
+Left Cartel (SFIO + PRS + PRRRS): [+ left_cartel_coalition +]%
 
 Grand Coalition (SFIO + Z + PUP + [+ prs_name +] + PRRRS): [+ grand_coalition +]%
 
@@ -315,7 +315,7 @@ There are some potential coalition arrangements.
 @coalition_menu
 
 - @sfio_majority
-- @weimar_coalition
+- @left_cartel_coalition
 - @grand_coalition
 - @new_grand_coalition
 - @unity_government
@@ -918,9 +918,9 @@ achievement: minderheitsregierung
 We have won the vote of no confidence, and are currently ruling under an SFIO minority government. Now our task is to fix the country.
 
 
-@weimar_coalition
-title: We can form a Weimar Coalition.
-subtitle: SFIO + Z + [+ prs_name +] [? if sapd_formed and pcf_relation >= 30 : + SAPD toleration ?] ([+ weimar_coalition +]%)
+@left_cartel_coalition
+title: We can form a Left Cartel Government.
+subtitle: SFIO + PRS + PRRRS [? if sapd_formed and pcf_relation >= 30 : + SAPD toleration ?] ([+ left_cartel_coalition +]%)
 view-if: weimar_coalition >= 50
 on-arrival: leverage += 5; leverage += 5 if z_party_leader == "Joos"; in_weimar_coalition = 1; sfio_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = prs_name; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = prs_name; finance_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
 achievement: weimar_coalition
