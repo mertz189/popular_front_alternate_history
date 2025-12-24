@@ -1,9 +1,9 @@
 title: <span style="color: #808080;">Laval's</span> Third Government Falls !
 subtitle: Government falls over the electoral law.
 view-if: chancellor == "Laval" and year = 1932 and month = 2
-new-page: true
 tags: event
 max-visits: 1
+new-page: true
 
 = <span style="color: #808080;">Laval's</span> Third Government Falls !
 
@@ -13,6 +13,6 @@ max-visits: 1
 
 @tardieu_nomination 
 on-arrival: old_chancellor = chancellor; chancellor = "Tardieu"; chancellor_party = "AD";
-face-image: img/portraits/TardieuAndre.jpg
+face-img: img/portraits/TardieuAndre.jpg
 
 President <span style="color: #808080;">Paul Doumer</span> decides to replace him with <span style="color: #C0A054;">André Tardieu</span>, who led the government twice in 1929-1930. Having one of our most ruthless opponents in the highest office at a time of elections hardly relieves us.
